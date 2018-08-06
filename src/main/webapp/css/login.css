@@ -1,0 +1,162 @@
+header{
+	height:70px;
+	border-bottom:1px solid rgb(229,229,229);
+}
+header div{
+	width:1024px;
+	height:70px;
+	line-height:70px;
+	margin:0 auto;
+}
+header div .header-left{
+	width:400px;
+	float:left;
+	font-weight: bold;
+}
+header div .header-left a{
+	display:block;
+	height:70px;
+	float:left;
+}
+header div .header-left img{
+	width:166px;
+	height:70px;
+}
+header div .header-left .sign{
+	float:left;
+	margin-left:20px;
+	border-left:1px solid #ddd;
+	width:100px;
+	font-weight:normal;
+	color:#999;
+	text-indent:20px;
+}
+header div .header-right{
+	width:600px;
+	height:70px;
+	float:right;
+}
+section.main{
+	height:635px;
+	background-color:#f4f4f4;
+}
+section.main .main-login{
+	width:960px;
+	height:530px;
+	margin:0 auto;
+	padding:45px 0 0 64px;
+	background:url(../image/login-bg.jpeg) no-repeat 0 0;
+}
+section.main .main-login .login-form{
+	position:relative;
+	width:367px;
+	height:373px;
+	border:1px solid rgb(211,211,211);
+	background-color:white;
+}
+section.main .main-login .login-form .login-message{
+	position: absolute;
+	top:53px;
+	left:100px;
+	width:200px;
+	text-align:center;
+	color:red;
+	font-size:12px;
+	background:#ffc;
+	border:1px solid #ccc;
+	display:none;
+}
+section.main .main-login .login-form label{
+	
+}
+section.main .main-login .login-form p.login-title{
+	height:50px;
+	line-height:50px;
+	font-size:18px;
+	border-bottom:1px solid rgb(211,211,211);
+	text-indent:40px;
+	font-family:"Microsoft Yahei";
+	background-color:rgb(250, 250, 250);
+}
+section.main .login-form div{
+	width:326px;
+	margin:0 auto;
+	color:rgb(102,102,102);
+}
+section.main .login-form div.login-zh{
+	padding-left:30px;
+	margin-top:23px;
+	font-size:14px;
+}
+section.main .login-form div.login-mm{
+	padding-left:30px;
+	margin-top:10px;
+	font-size:14px;
+}
+section.main .login-form div.login-mm i{
+	text-indent:28px;
+	display:inline-block;
+	font-style: normal;
+}
+section.main .login-form input[placeholder]{
+	width:220px;
+	height:20px;
+	padding:5px 0;
+	
+}
+section.main .main-login .login-form p.auto-login{
+	color:rgb(164,164,164);
+	font-size:12px;
+	width:104px;
+	margin:10px auto 20px;
+}
+section.main .login-form .submit{
+	display:block;
+	width:100px;
+	height:26px;
+	line-height:26px;
+	background-color:rgb(255,84,106);
+	color:white;
+	font-size:14px;
+	letter-spacing:10px;
+	text-indent:30px;
+	text-decoration: none;
+	box-shadow:2px 2px 5px #333333;
+	float:left;
+}
+section.main .login-btn{
+	box-sizing:border-box;
+	padding-left:75px;
+	height:26px;
+	text-indent:20px;
+}
+section.main .login-btn a{
+	font-size:12px;
+	color:rgb(164,164,164);
+	text-decoration: underline;
+}
+section.main .login-btn a:hover{
+	color:#0066cb;
+}
+section.main .login-form .login-other{
+	width:326px;
+	height:49px;
+	margin-top:20px auto 0;
+	border-bottom:1px solid rgb(232, 232, 232);
+	padding-bottom:8px;
+	
+}
+section.main .login-form .register{
+	width:326px;
+	height:22px;
+	margin:20px auto 0;
+	text-align: center;
+	font-size:14px;
+}
+section.main .login-form .register a{
+	text-decoration: underline;
+	color:rgb(127,127,127);
+}
+section.main .login-form .register a:hover{
+	color:#0066cb;
+}

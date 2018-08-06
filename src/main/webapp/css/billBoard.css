@@ -1,0 +1,142 @@
+section.main{
+	width:1000px;
+	margin:40px auto;
+}
+.side-bar{
+	width:220px;
+	float: left;
+	box-sizing: border-box;
+	border-width:0 1px 1px;
+	border-style:solid;
+	border-color:#eee;
+	overflow: hidden;
+}
+.side-bar h3{
+	border-top: 1px solid #f2f2f2;
+}
+.side-bar h3 a{
+    display: block;
+    height: 45px;
+    padding-left: 15px;
+    line-height: 45px;
+    font-size: 16px;
+    color: #555;
+    position: relative;
+    font-weight: 400;
+}
+.side-bar h3 a i{
+	position:absolute;
+	top: 20px;
+	right: 20px;
+	background:url(../image/icon_splice.png) no-repeat -450px -120px;
+	height:9px;
+	text-indent: -9999px;
+}
+.side-bar ul{
+	margin-top: 6px;
+	overflow: hidden;
+}
+.side-bar ul li a{
+	font-size: 14px;
+    padding-left:15px;
+    margin-bottom: 4px;
+    line-height: 36px;
+    height: 36px;
+    display: block;
+    color: #555;
+    position: relative;
+}
+.side-bar ul li a:hover{
+	background: #eee;
+}
+.side-bar ul li a.current{
+	background: #169af3;
+    color: #fff;
+}
+.content{
+	width:750px;
+	float: right;
+}
+.content .title{
+	height:58px;
+	margin-bottom:24px;
+    border-bottom: 1px dotted #cacaca;
+}
+.content .title h3{
+	font-size: 24px;
+	float: left;
+	font-weight: normal;
+}
+.content .title a{
+	float: right;
+    margin-top: -6px;
+    font-size: 14px;
+    background: #169af3;
+    color: #fff;
+    border-radius: 2px;
+    display: block;
+    width:112px;
+    height:34px;
+    line-height: 34px;
+    position: relative;
+    text-indent: 40px;
+}
+.content .title a i{
+	position:absolute;
+	width:9px;
+	height:16px;
+	background: url(../image/play_icon.png) no-repeat ;
+	top:9px;
+	left:20px;
+	text-indent:-9999px;
+}
+.content .rank-wrap li{
+	padding: 0 10px;
+    border-bottom: 1px solid #f2f2f2;
+    height: 54px;
+    line-height: 54px;
+}
+.content .rank-wrap .btn_check{
+	text-indent:-999px;
+	margin-right: 10px;
+    padding-left: 14px;
+    height: 14px;
+    cursor: pointer;
+    background: url(../image/icon_splice.png) no-repeat -180px -176px;
+}
+.content .rank-wrap .num{
+    margin-right: 10px;
+    display: inline-block;
+	width:15px;
+}
+.content .rank-wrap .num strong{
+    font-size: 14px;
+    color: #fe2c62;
+    font-weight: 400;
+}
+.content .rank-wrap .top strong{
+	font-size: 18px;
+}
+.content .rank-wrap .tip{
+	margin-right: 10px;
+	padding-left: 17px;
+    height: 9px;
+    background: url(../image/icon_splice.png) no-repeat -240px -234px;
+}
+.content .rank-wrap a{
+	font-size: 14px;
+    margin-right: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color:#333;
+}
+.content .rank-wrap .update-time{
+	float: right;
+    padding-top: 20px;
+    height: 15px;
+    line-height: 15px;
+    white-space: nowrap;
+    color: #999;
+    font-size: 14px;
+}
