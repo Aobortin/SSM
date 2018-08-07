@@ -36,4 +36,8 @@ $(document).ready(function(){
 	}).on("mouseout",function(){
 		$(".user-menu").css("display","none");
 	})
+	
+	$("img[alt]").on("click",function(){
+		window.location.href="/SSM/chat?toUserName="+$(this).attr("alt");
+	})
 });

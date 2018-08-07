@@ -99,10 +99,10 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 						<img alt="" src="image/cptBig.jpg">
 					</div>
 					<div class="cpt cptMid">
-						<img alt="" src="image/mid1.jpg">
+						<img alt="zhangsan" src="image/mid1.jpg">
 					</div>
 					<div class="cpt cptMid">
-						<img alt="" src="image/mid2.jpg">
+						<img alt="lisi" src="image/mid2.jpg">
 					</div>
 					<div class="cpt cptMid">
 						<img alt="" src="image/mid3.jpg">

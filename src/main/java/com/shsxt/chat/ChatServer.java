@@ -27,7 +27,7 @@ import net.sf.json.JSONObject;
 public class ChatServer {
 	private final static Logger log = Logger.getLogger(ChatServer.class);
 	private static final Set<ChatServer> onlineUsers = new CopyOnWriteArraySet<ChatServer>();
-    private String nickname;
+    private User user;
     private Session session;
     private HttpSession httpSession;
 
@@ -42,8 +42,7 @@ public class ChatServer {
 	public void onOpen(Session session,EndpointConfig config){
 		this.session = session;
         this.httpSession = (HttpSession) config.getUserProperties().get(HttpSession.class.getName());
-        User currentUser=(User) httpSession.getAttribute("currentUser");
-        this.nickname=currentUser.getNickName();
+        this.user=(User) httpSession.getAttribute("currentUser");
         onlineUsers.add(this);
 //        String message = String.format("* %s %s", nickname, " from websocket 上线了...");
 //        broadcast(message);
@@ -59,13 +58,13 @@ public class ChatServer {
 	public void onMessage(String message,Session session){
 		//把用户发来的消息解析为JSON对象
 		JSONObject obj = JSONObject.fromObject(message);
-		String toUser=(String) obj.get("to");
+		String toUserName=(String) obj.get("to");
 		//向JSON对象中添加发送时间
 		obj.put("date", df.format(new Date()));
 		for (Iterator<ChatServer> iterator = onlineUsers.iterator(); iterator.hasNext();) {
 			ChatServer chatServer = (ChatServer) iterator.next();
-			if(toUser.equals(chatServer.nickname)) {
-				obj.put("isSelf", chatServer.session.equals(session));
+			if(toUserName.equals(chatServer.user.getUserName())) {
+				obj.put("isSelf", true);
 				chatServer.session.getAsyncRemote().sendText(obj.toString());
 			}
 		}
@@ -86,7 +85,7 @@ public class ChatServer {
 	@OnClose
 	public void onClose(Session session){
 		onlineUsers.remove(this);
-        String message = String.format("* %s %s",nickname, " from websocket 已经离开...");
+        String message = String.format("* %s %s",user.getNickName(), " from websocket 已经离开...");
         broadcast(message);
 		room.remove(session);
 	}
@@ -114,7 +113,7 @@ public class ChatServer {
 	                } catch (IOException e1) {
 	                    // Ignore
 	                }
-	                String message = String.format("* %s %s",client.nickname, " from websocket 已经离开...");
+	                String message = String.format("* %s %s",client.user.getNickName(), " from websocket 已经离开...");
 	                broadcast(message);
 	            }
 	        }

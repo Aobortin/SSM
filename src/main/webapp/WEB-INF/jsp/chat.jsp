@@ -25,6 +25,8 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 </head>
 <body>
 <input type="hidden" value="${currentUser.nickName}" id="nickName"/>
+<input type="hidden" value="${currentUser.userName}" id="userName"/>
+<input type="hidden" value="${toUserName}" id="toUserName"/>
 <header class="am-topbar am-topbar-fixed-top">
 	  <div class="am-container">
 	    <h1 class="am-topbar-brand">

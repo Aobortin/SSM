@@ -17,7 +17,9 @@ $(function(){
     	if($("#myEditor").html()=="")
     	$("#myEditor").html("<p>请输入聊天信息...</p>");
     })
+    var userName = $("#userName").val();
     var nickname = $("#nickName").val();
+    var toUserName = $("#toUserName").val();
 	var socket = new WebSocket("ws://localhost:8080/SSM/websocket");
    
 	//接收服务器的消息
@@ -39,7 +41,8 @@ $(function(){
         	//构建一个标准格式的JSON对象
         	var obj = JSON.stringify({
 	    		nickname:nickname,
-	    		to:'李四',
+	    		from:userName,
+	    		to:toUserName,
 	    		content:txt
 	    	});
             // 发送消息
