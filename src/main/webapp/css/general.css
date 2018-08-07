@@ -94,23 +94,23 @@ header .right-nav{
     width: 402px;
     position: absolute;
 }
-header .right-nav ul{
+header .right-nav ul.nav-list{
 	float:left;
 	width: 250px;
     border-right: 1px solid #e6e6e6;
     padding-right: 11px;
     text-align: right;
 }
-header .right-nav ul li{
+header .right-nav ul.nav-list li{
 	float: left;
     padding: 0 15px;
     font-size:13px;
 }
-header .right-nav ul li a{
+header .right-nav ul.nav-list li a{
 	color: #777;
 	outline: 0;
 }
-header .right-nav ul li a:hover{
+header .right-nav ul.nav-list li a:hover{
 	color:#009af3;
 }
 header .right-nav .login-area{
@@ -122,6 +122,7 @@ header .right-nav .login-area{
 }
 header .login-area #login-out{
 	cursor: pointer;
+	height:30px;
 }
 header .login-area #login-out img{
 	float: left;
@@ -138,6 +139,49 @@ header .login-area #login-out .user-name{
     white-space: nowrap;
     text-overflow: ellipsis;
     color: #777;
+}
+header .login-area .user-menu{
+	position: absolute;
+	padding-top:20px;
+	z-index:10;
+	top:22px;
+	width:117px;
+	display:none;
+}
+header .login-area .user-menu .topArrow1{
+    position: absolute;
+    top: 4px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    z-index: 99;
+    border: 8px solid transparent;
+    border-bottom: 9px solid #d6d6d6;
+}
+header .login-area .user-menu .topArrow2{
+    position: absolute;
+	top: 6px;
+    z-index: 100;
+    border-bottom: 9px solid #fff!important;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+}
+header .login-area .user-menu ul{
+	background: #fff;
+	border:1px solid #ccc;
+}
+header .login-area .user-menu li a{
+	display:block;
+	height:28px;
+	line-height:28px;
+	color: #777;
+	font-size:13px;
+	text-align:center;
+}
+header .login-area .user-menu li a:hover{
+	color:#009af3;
 }
 nav{
     height: 55px;

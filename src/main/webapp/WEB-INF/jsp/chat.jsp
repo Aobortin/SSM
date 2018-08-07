@@ -24,6 +24,7 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 	<script type="text/javascript" src="js/chat.js"></script>
 </head>
 <body>
+<input type="hidden" value="${currentUser.nickName}" id="nickName"/>
 <header class="am-topbar am-topbar-fixed-top">
 	  <div class="am-container">
 	    <h1 class="am-topbar-brand">

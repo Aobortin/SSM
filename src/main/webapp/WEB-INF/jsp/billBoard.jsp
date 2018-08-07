@@ -26,7 +26,7 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 			</div>
 		</div>
 		<div class="right-nav">
-			<ul>
+			<ul class="nav-list">
 				<li><a href="">客服中心</a></li>
 				<li><a href="">招贤纳士</a></li>
 				<li><a href="">会员中心</a></li>
@@ -34,7 +34,15 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 			<div class="login-area">
 				<div id="login-out">
 					<img class="user-img" src="image/Aobortin.jpg"/>
-					<span class="user-name">Aobortin</span>
+					<span class="user-name">${currentUser.nickName}</span>
+					<div class="user-menu">
+						<div class="topArrow1"></div>
+						<div class="topArrow2"></div>
+						<ul>
+							<li><a href="">个人账号</a></li>
+							<li><a href="">退出登录</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -9,27 +9,26 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.shsxt.service.UserService;
 import com.shsxt.vo.User;
 
 @Controller
+@SessionAttributes
 public class MainController {
 	@Resource
     private UserService userService;
 	
 	@RequestMapping("main")
-	public String login(@RequestParam(required=false) String userName,@RequestParam(required=false) String userPwd,Model model) {
+	public String login(@RequestParam(required=false) String userName,@RequestParam(required=false) String userPwd,Model model,HttpSession httpSession) {
 		User currentUser =null;
 		if(userName!=null&&userPwd!=null) {
 			currentUser = userService.queryUserByLogin(userName, userPwd);
+			httpSession.setAttribute("currentUser", currentUser);
 		}
-//		if(currentUser!=null) {
-			model.addAttribute("currentUser",currentUser);
-			return "main";
-//		}else {
-//			return "redirect:login";
-//		}
+		model.addAttribute("currentUser",currentUser);
+		return "main";
 	}
 	
 	@ResponseBody
@@ -65,15 +64,8 @@ public class MainController {
 	}
 	
 	@RequestMapping("billBoard")
-	public String billBoard() {
+	public String billBoard(HttpSession httpSession,Model model) {
+		model.addAttribute("currentUser", httpSession.getAttribute("currentUser"));
 		return "billBoard";
 	}
-//	@RequestMapping("index")
-//	public String allDatas(HttpServletRequest request,Model model,Map<String,String> map,ModelMap modelMap) {
-//		model.addAttribute("abc", "测试 jstl标签");
-//		map.put("def", "测试map");
-//		request.setAttribute("ghi", "测试request");
-//		modelMap.addAttribute("jkl", "测试modelMap");
-//		return "login";
-//	}
 }

@@ -17,23 +17,15 @@ $(function(){
     	if($("#myEditor").html()=="")
     	$("#myEditor").html("<p>请输入聊天信息...</p>");
     })
-    var nickname = "风清扬"+Math.random();
+    var nickname = $("#nickName").val();
 	var socket = new WebSocket("ws://localhost:8080/SSM/websocket");
-    //接收服务器的消息
+   
+	//接收服务器的消息
     socket.onmessage=function(ev){
     	var obj = eval(   '('+ev.data+')'   );
     	addMessage(obj);
     }
     
-	$(this).on("keydown",function(event){
-		if (event.shiftKey && event.which == 13){
-			//这里实现编辑换行效果
-		}else if(event.keyCode==13){
-			event.preventDefault();
-			$("#send").click();
-		}
-	})
-
     $("#send").on("click",function(){
     	if (!um.hasContents()) {  // 判断消息输入框是否为空
             // 消息输入框获取焦点
@@ -47,6 +39,7 @@ $(function(){
         	//构建一个标准格式的JSON对象
         	var obj = JSON.stringify({
 	    		nickname:nickname,
+	    		to:'李四',
 	    		content:txt
 	    	});
             // 发送消息
@@ -57,6 +50,15 @@ $(function(){
             um.focus();
         }
     });
+    
+	$(this).on("keydown",function(event){
+		if (event.shiftKey && event.which == 13){
+			//这里实现编辑换行效果
+		}else if(event.keyCode==13){
+			event.preventDefault();
+			$("#send").click();
+		}
+	})
 });
 
 //人名nickname，时间date，是否自己isSelf，内容content

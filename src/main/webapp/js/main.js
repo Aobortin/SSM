@@ -25,4 +25,15 @@ $(document).ready(function(){
 		$(".slider-prev").css("display","none");
 		$(".slider-next").css("display","none");
 	})
+	
+	$(".login-area").on("mouseover",function(){
+		$(".user-menu").css("display","block");
+	}).on("mouseout",function(){
+		$(".user-menu").css("display","none");
+	})
+	$(".user-menu").on("mouseover",function(){
+		$(".user-menu").css("display","block");
+	}).on("mouseout",function(){
+		$(".user-menu").css("display","none");
+	})
 });
