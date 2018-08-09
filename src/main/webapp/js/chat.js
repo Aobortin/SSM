@@ -17,10 +17,10 @@ $(function(){
     	if($("#myEditor").html()=="")
     	$("#myEditor").html("<p>请输入聊天信息...</p>");
     })
-    var userName = $("#userName").val();
-    var nickname = $("#nickName").val();
+    var fromUserName = $("#fromUserName").val();
     var toUserName = $("#toUserName").val();
-	var socket = new WebSocket("ws://localhost:8080/SSM/websocket");
+    var fromNickName = $("#fromNickName").val();
+	var socket = new WebSocket("ws://localhost:8080/SSM/websocket/"+fromUserName);
    
 	//接收服务器的消息
     socket.onmessage=function(ev){
@@ -40,9 +40,9 @@ $(function(){
         	var txt = um.getContent();
         	//构建一个标准格式的JSON对象
         	var obj = JSON.stringify({
-	    		nickname:nickname,
-	    		from:userName,
+	    		from:fromUserName,
 	    		to:toUserName,
+	    		from_nick:fromNickName,
 	    		content:txt
 	    	});
             // 发送消息
@@ -69,7 +69,7 @@ function addMessage(msg){
 	var box = $("#msgtmp").clone(); 	//复制一份模板，取名为box
 	box.show();							//设置box状态为显示
 	box.appendTo("#chatContent");		//把box追加到聊天面板中
-	box.find('[ff="nickname"]').html(msg.nickname); //在box中设置昵称
+	box.find('[ff="nickname"]').html(msg.from); //在box中设置昵称
 	box.find('[ff="msgdate"]').html(msg.date); 		//在box中设置时间
 	box.find('[ff="content"]').html(msg.content); 	//在box中设置内容
 	box.addClass(msg.isSelf? 'am-comment-flip':'');	//右侧显示

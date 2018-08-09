@@ -8,10 +8,9 @@
     overflow: hidden;
 }
 .slider-wrap .banner li{
-	float: left;
 	width: 1265px;
 	height: 445px;
-    /* position: absolute; */
+    position: absolute;
     display: list-item;
 }
 .slider-wrap .banner li a{

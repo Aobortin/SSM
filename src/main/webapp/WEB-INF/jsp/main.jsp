@@ -1,4 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
+<%@ taglib uri="http://java.sun.com/jstl/fmt" prefix="fmt"%>  
+<%@ taglib uri="http://java.sun.com/jstl/sql" prefix="sql"%>  
+<%-- <%@ taglib uri="http://java.sun.com/jstl/function" prefix="fn"%>  --%>
 <%String path = request.getContextPath();
 String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>   
@@ -14,6 +18,7 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
+	<input type="hidden" value="${currentUser.userName}" id="currentUserName"/>
 	<header>
 		<h1><a href="###"><img alt="风雪佳人" src="image/logo.png"/></a></h1>
 		<div class="top-search">
@@ -32,18 +37,28 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 				<li><a href="">会员中心</a></li>
 			</ul>
 			<div class="login-area">
-				<div id="login-out">
-					<img class="user-img" src="image/Aobortin.jpg"/>
-					<span class="user-name">${currentUser.nickName}</span>
-					<div class="user-menu">
-						<div class="topArrow1"></div>
-						<div class="topArrow2"></div>
-						<ul>
-							<li><a href="">个人账号</a></li>
-							<li><a href="">退出登录</a></li>
-						</ul>
-					</div>
-				</div>
+				<c:choose>
+					<c:when test="${currentUser.nickName==null}">
+						<div id="login-in">
+							<a href="${basePath}/SSM/login" class="login-btn">登录</a>
+							<a href="${basePath}/SSM/register" class="regin-btn">注册</a>
+						</div>
+					</c:when>
+					<c:otherwise>
+						<div id="login-out">
+							<img class="user-img" src="image/avatar/${currentUser.userName}.jpeg"/>
+							<span class="user-name">${currentUser.nickName}</span>
+							<div class="user-menu">
+								<div class="topArrow1"></div>
+								<div class="topArrow2"></div>
+								<ul>
+									<li><a href="">个人账号</a></li>
+									<li><a href="${basePath}/SSM/exit">退出登录</a></li>
+								</ul>
+							</div>
+						</div>
+					</c:otherwise>
+				</c:choose>
 			</div>
 		</div>
 	</header>

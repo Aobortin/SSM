@@ -68,4 +68,11 @@ public class MainController {
 		model.addAttribute("currentUser", httpSession.getAttribute("currentUser"));
 		return "billBoard";
 	}
+	
+	@RequestMapping("exit")
+	public String exit(HttpSession httpSession,Model model) {
+		httpSession.removeAttribute("currentUser");
+		model.addAttribute("currentUser", null);
+		return "redirect:main";
+	}
 }

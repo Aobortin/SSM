@@ -120,6 +120,26 @@ header .right-nav .login-area{
     margin-top: -5px;
     margin-left: 30px;
 }
+header .login-area #login-in a{
+	float: left;
+    display: block;
+    width: 48px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #169af3;
+    border-radius: 2px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    background-color: #169af3;
+    font-size:13px;
+}
+header .login-area #login-in a.regin-btn{
+	border: 1px solid #dbdbdb;
+    background-color: #fff;
+    margin-left: 10px;
+    color: #777;
+}
 header .login-area #login-out{
 	cursor: pointer;
 	height:30px;

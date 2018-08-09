@@ -38,6 +38,7 @@ $(document).ready(function(){
 	})
 	
 	$("img[alt]").on("click",function(){
-		window.location.href="/SSM/chat?toUserName="+$(this).attr("alt");
+		var fromUserName =$("#currentUserName").val();
+		window.location.href="/SSM/chat?toUserName="+$(this).attr("alt")+"&fromUserName="+fromUserName;
 	})
 });

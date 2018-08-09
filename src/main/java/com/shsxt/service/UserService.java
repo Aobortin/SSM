@@ -42,7 +42,9 @@ public class UserService {
     public void saveUser(User user){
     	userDao.saveUser(user);
     }
-    
+    public User selectUserByUserName(String userName) {
+    	return userDao.selectUserByUserName(userName);
+    }
     public  void test(){
         throw  new ParamException("异常测试...");
     }

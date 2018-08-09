@@ -1,7 +1,6 @@
 package com.shsxt.utils;
 
 import java.io.UnsupportedEncodingException;
-import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -45,13 +44,7 @@ public class MD5Utill {
             return false;
     }
 	
-	//通过java提供的BigInteger 完成byte->HexString
-    private static String bytesToHex2(byte[] md5Array) {
-        BigInteger bigInt = new BigInteger(1, md5Array);
-        return bigInt.toString(16);
-    }
-
-    //通过位运算 将字节数组到十六进制的转换
+	//通过位运算 将字节数组到十六进制的转换
     public static String bytesToHex3(byte[] byteArray) {
         char[] hexDigits = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
         char[] resultCharArray = new char[byteArray.length * 2];
