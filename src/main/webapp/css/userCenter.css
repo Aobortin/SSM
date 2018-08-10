@@ -1,0 +1,16 @@
+section.info-center{
+	width: 960px;
+    height:627px;
+    margin: 0 auto;
+    padding: 30px 0 50px 0;
+    box-sizing: border-box;
+    background: black;
+}
+section.info-center .avatar-side{
+	width: 200px;
+	box-sizing: border-box;
+}
+section.info-center .avatar-content{
+	width:760px;
+	box-sizing: border-box;
+}

@@ -1,87 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
-<%@ taglib uri="http://java.sun.com/jstl/fmt" prefix="fmt"%>  
-<%@ taglib uri="http://java.sun.com/jstl/sql" prefix="sql"%>
-<%String path = request.getContextPath();
-String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>   
 <!DOCTYPE html>	
 <html>
 <head>
-	<meta charset="UTF-8">
 	<title>榜单</title>
-	<link rel="icon" href="image/love_bird.png" type="image/x-icon"/>
-	<link rel="stylesheet" type="text/css" href="css/general.css"/>
 	<link rel="stylesheet" type="text/css" href="css/billBoard.css"/>
 	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="js/billBoard.js"></script>
 </head>
+<jsp:include page="../include/head.jsp"></jsp:include>
 <body>
-	<header>
-		<h1><a href="###"><img alt="风雪佳人" src="image/logo.png"/></a></h1>
-		<div class="top-search">
-			<div class="search-input">
-				<input type="text"/>
-				<div class="search-btn">
-					<i class="search-icon"></i>
-					<span>搜索</span>
-				</div>
-			</div>
-		</div>
-		<div class="right-nav">
-			<ul class="nav-list">
-				<li><a href="">客服中心</a></li>
-				<li><a href="">招贤纳士</a></li>
-				<li><a href="">会员中心</a></li>
-			</ul>
-			<div class="login-area">
-				<c:choose>
-					<c:when test="${currentUser.nickName==null}">
-						<div id="login-in">
-							<a href="${basePath}/SSM/login" class="login-btn">登录</a>
-							<a href="${basePath}/SSM/register" class="regin-btn">注册</a>
-						</div>
-					</c:when>
-					<c:otherwise>
-						<div id="login-out">
-							<img class="user-img" src="image/Aobortin.jpg"/>
-							<span class="user-name">${currentUser.nickName}</span>
-							<div class="user-menu">
-								<div class="topArrow1"></div>
-								<div class="topArrow2"></div>
-								<ul>
-									<li><a href="">个人账号</a></li>
-									<li><a href="${basePath}/SSM/exit">退出登录</a></li>
-								</ul>
-							</div>
-						</div>
-					</c:otherwise>
-				</c:choose>
-			</div>
-		</div>
-	</header>
-	<nav>
-		<div class="nav">
-			<ul class="home-nav">
-				<li><a href="${basePath}/SSM/main">首页</a></li>
-				<li><a href="${basePath}/SSM/billBoard">榜单</a></li>
-				<li><a href="">下载客户端</a></li>
-				<li id="more"><a href="">更多</a></li>
-			</ul>
-			<ul class="second-menu">
-                <li><a href="">电台</a></li>
-                <li><a href="">MV</a></li>
-                <li><a href="">歌单</a></li>
-                <li><a href="">歌手</a></li>
-            </ul>
-			<ul class="sub-nav">
-				<li><a href="" class="icon-nav1">音乐直播</a></li>
-				<li><a href="" class="icon-nav2">酷狗LIVE</a></li>
-				<li><a href="" class="icon-nav3">音乐人</a></li>
-				<li><a href="" class="icon-nav4">商城</a></li>
-			</ul>
-		</div>
-	</nav>
 	<section class="main">
 		<div class="side-bar">
 			<h3><a href="">热门榜单<i>向上箭头</i></a></h3>
@@ -227,21 +154,6 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 			</div>
 		</div>
 	</section>
-	<footer>
-		<ul class="navi_link">
-			<li><a href="">联系客服</a></li>
-			<li><a href="">关于我们</a></li>
-			<li><a href="">联系我们</a></li>
-			<li><a href="">无线业务</a></li>
-			<li><a href="">注册条款</a></li>
-			<li><a href="">区块链</a></li>
-			<li><a href="">招聘信息</a></li>
-			<li><a href="">交友信息</a></li>
-			<li><a href="">隐私保护</a></li>
-			<li><a href="">帮助中心</a></li>
-			<li><a href="">安全中心</a></li>
-		</ul>
-		<p>&copy;2018 版权所有</p>
-	</footer>
 </body>
+<jsp:include page="../include/foot.jsp"></jsp:include>
 </html>

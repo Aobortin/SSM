@@ -123,6 +123,7 @@
         <property name="maxInMemorySize">
             <value>4096</value>
         </property>
+        <property name="defaultEncoding" value="UTF-8"></property>
     </bean>
 
 

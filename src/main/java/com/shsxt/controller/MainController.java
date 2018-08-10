@@ -1,5 +1,7 @@
 package com.shsxt.controller;
 
+import java.io.IOException;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.shsxt.service.UserService;
+import com.shsxt.utils.FileHandleUtil;
 import com.shsxt.vo.User;
 
 @Controller
@@ -74,5 +77,20 @@ public class MainController {
 		httpSession.removeAttribute("currentUser");
 		model.addAttribute("currentUser", null);
 		return "redirect:main";
+	}
+	
+	@RequestMapping("userCenter")
+	public String userCenter(HttpSession httpSession,Model model) {
+		model.addAttribute("currentUser", httpSession.getAttribute("currentUser"));
+		model.addAttribute("title", "用户中心");
+		return "userCenter";
+	}
+	
+	@RequestMapping("uploadFile")
+	public String  springUpload(HttpServletRequest request,HttpSession httpSession) throws IllegalStateException, IOException{
+		String path="/Users/linwang/Documents/SSM/src/main/webapp/image/avatar/";
+		User currentUser=(User)httpSession.getAttribute("currentUser");
+		FileHandleUtil.upload(request, path,currentUser.getUserName());
+	    return "userCenter"; 
 	}
 }
