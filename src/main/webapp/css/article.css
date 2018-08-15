@@ -1,0 +1,43 @@
+section.page{
+	width:800px;
+	margin:30px auto;
+	min-height:100px;
+	padding:8px;
+	background: url(../image/article_bg.png);
+}
+section.page .content{
+	border:1px solid #ccc;
+}
+section.page .content .avatar-cover{
+    width: 165px;
+    height: 165px;
+    margin: 64px auto 24px;
+    padding:5px;
+    border: 1px solid #efece5;
+    background: #fffbf2;
+}
+section.page .content h1{
+	font: 32px/45px PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif;
+    overflow: hidden;
+    height: 45px;
+    margin-bottom: 7px;
+    text-align:center;
+}
+section.page .content .write-time{
+	margin:0 20px;
+	color:#262626;
+	text-align:right;
+}
+section.page .content .article{
+	box-sizing:border-box;
+	padding:60px 64px;
+	font-size:18px;
+	margin-bottom: 64px;
+}
+section.page .content .article{
+	line-height: 1.8;
+	font-size: 18px;
+    overflow: hidden;
+    margin: 0.8em 0;
+    -webkit-font-smoothing: antialiased;
+}

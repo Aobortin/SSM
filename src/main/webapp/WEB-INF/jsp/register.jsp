@@ -86,7 +86,7 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 				<dl class="c">
 					<dt>身高</dt>
 					<dd>
-						<input name="height" value="180厘米"/>
+						<input name="height" value="180"/>厘米
 					</dd>
 				</dl>
 				<dl class="c">

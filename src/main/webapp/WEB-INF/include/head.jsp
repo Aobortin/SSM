@@ -63,7 +63,7 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 		<div class="nav">
 			<ul class="home-nav">
 				<li><a href="${basePath}/SSM/main">首页</a></li>
-				<li><a href="${basePath}/SSM/billBoard">榜单</a></li>
+				<li><a href="${basePath}/SSM/billBoard">情感</a></li>
 				<li><a href="">下载客户端</a></li>
 				<li id="more"><a href="">更多</a></li>
 			</ul>

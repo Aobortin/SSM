@@ -82,7 +82,6 @@ public class MainController {
 	@RequestMapping("userCenter")
 	public String userCenter(HttpSession httpSession,Model model) {
 		model.addAttribute("currentUser", httpSession.getAttribute("currentUser"));
-		model.addAttribute("title", "用户中心");
 		return "userCenter";
 	}
 	
@@ -92,5 +91,11 @@ public class MainController {
 		User currentUser=(User)httpSession.getAttribute("currentUser");
 		FileHandleUtil.upload(request, path,currentUser.getUserName());
 	    return "userCenter"; 
+	}
+
+	@RequestMapping("article")
+	public String article(HttpSession httpSession,Model model) {
+		model.addAttribute("currentUser", httpSession.getAttribute("currentUser"));
+		return "article";
 	}
 }

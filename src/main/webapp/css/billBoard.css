@@ -95,6 +95,7 @@ section.main{
     border-bottom: 1px solid #f2f2f2;
     height: 54px;
     line-height: 54px;
+    cursor: pointer;
 }
 .content .rank-wrap .btn_check{
 	text-indent:-999px;

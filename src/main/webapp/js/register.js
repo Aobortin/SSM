@@ -4,8 +4,8 @@ $(function(){
 		var month=$("select[name=month]").val();
 		var day=$("select[name=day]").val();
 		$("input[name=birthday]").val(stringToDate(year+"-"+month+"-"+day));
-		var height=$("input[name=height]").val();
-		$("input[name=height]").val(height.replace("厘米",""));
+//		var height=$("input[name=height]").val();
+//		$("input[name=height]").val(height.replace("厘米",""));
 		var education=$("input[name=education]").val();
 		if(education=="初中"){
 			$("input[name=education]").val(1);

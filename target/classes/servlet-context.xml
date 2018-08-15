@@ -74,7 +74,7 @@
     <!--
       拦截器配置_02  推荐
     -->
-<!--    <mvc:interceptors>
+   <!-- <mvc:interceptors>
         <mvc:interceptor>
             &lt;!&ndash;
               拦截所有资源
@@ -99,17 +99,17 @@
             <bean class="com.shsxthsxt.interceptors.MyInterceptor03"></bean>
         </mvc:interceptor>
 
-    </mvc:interceptors>-->
+    </mvc:interceptors> -->
     
     
     
-   <!-- <mvc:interceptors>
+   <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/**"/>
-            <mvc:exclude-mapping path="/user/login.do"/>
+            <mvc:mapping path="/userCenter"/>
+            <mvc:exclude-mapping path="/login"/>
             <bean class="com.shsxt.interceptors.LoginInterceptor"></bean>
         </mvc:interceptor>
-    </mvc:interceptors>-->
+    </mvc:interceptors>
 
 
     <!--

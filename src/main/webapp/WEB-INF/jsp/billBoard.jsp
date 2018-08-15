@@ -2,7 +2,7 @@
 <!DOCTYPE html>	
 <html>
 <head>
-	<title>榜单</title>
+	<title>情感</title>
 	<link rel="stylesheet" type="text/css" href="css/billBoard.css"/>
 	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="js/billBoard.js"></script>
@@ -56,7 +56,7 @@
 						<span class="btn_check"></span>
 						<span class="num top"><strong>1</strong></span>
 						<span class="tip"></span>
-						<a href="">蔡徐坤 - It's You</a>
+						<a href="/SSM/article">蔡徐坤 - It's You</a>
 						<span class="update-time">3:45</span>
 					</li>
 					<li>
@@ -154,6 +154,6 @@
 			</div>
 		</div>
 	</section>
-</body>
 <jsp:include page="../include/foot.jsp"></jsp:include>
+</body>
 </html>

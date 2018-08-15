@@ -1,5 +1,4 @@
 $(function(){
-	$(".home-nav").children().eq(0).css("backgroundColor","#0c8ed9");
 	$("#more").on("mouseover",function(){
 		$(".second-menu").css("display","block");
 		$("#more a").css("backgroundImage","url(image/arrowMoreu.png)");

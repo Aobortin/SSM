@@ -12,12 +12,23 @@ input,select{
 	outline: 0;
 }
 .clearfix {
-  overflow: auto;
   zoom: 1;
+}
+.clearfix:after {
+   content:""; 
+   display: block; 
+   visibility: hidden;
+   height: 0;
+   clear:both; 
 }
 img{
 	width:100%;
 	height:100%;
+}
+.clearfix{
+	clear:both;
+	overflow: hidden;
+  	zoom: 1;
 }
 /* a:hover{
 	text-decoration: underline;
