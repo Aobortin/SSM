@@ -11,9 +11,13 @@
 <body>
 	<section class="page">
 		<div class="content">
-			<div class="avatar-cover">
+			<%-- <div class="avatar-cover">
 				<img alt="" src="image/avatar/${currentUser.userName}.jpeg"/>
-			</div>
+			</div> --%>
+			<audio autoplay controls="controls" loop="loop" preload="auto"
+		            	src="music/大唐境外.mp3">
+		      		<!-- 你的浏览器版本太低，不支持audio标签 -->
+			</audio>
 			<h1>我不是小偷</h1>
 			<p class="write-time">2017.01.01</p>
 			<div class="article">

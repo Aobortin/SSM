@@ -37,19 +37,19 @@
 				</div>
 				<div class="item-content">
 					<div class="cpt cptBig">
-						<img alt="" src="image/cptBig.jpg">
+						<a href="${basePath}/SSM/loverDetail?loverId=1"><img alt="" src="image/cptBig.jpg"></a>
 					</div>
 					<div class="cpt cptMid">
-						<img alt="zhangsan" src="image/mid1.jpg">
+						<a href="${basePath}/SSM/loverDetail?loverId=2"><img alt="zhangsan" src="image/mid1.jpg"></a>
 					</div>
 					<div class="cpt cptMid">
-						<img alt="lisi" src="image/mid2.jpg">
+						<a href="${basePath}/SSM/loverDetail?loverId=4"><img alt="lisi" src="image/mid2.jpg"></a>
 					</div>
 					<div class="cpt cptMid">
-						<img alt="" src="image/mid3.jpg">
+						<a href="${basePath}/SSM/loverDetail?loverId=5"><img alt="" src="image/mid3.jpg"></a>
 					</div>
 					<div class="cpt cptMid">
-						<img alt="" src="image/mid4.jpg">
+						<a href="${basePath}/SSM/loverDetail?loverId=9"><img alt="" src="image/mid4.jpg"></a>
 					</div>
 				</div>
 			</div>

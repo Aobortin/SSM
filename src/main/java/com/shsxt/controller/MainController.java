@@ -25,23 +25,27 @@ public class MainController {
 	
 	@RequestMapping("main")
 	public String login(@RequestParam(required=false) String userName,@RequestParam(required=false) String userPwd,Model model,HttpSession httpSession) {
-		User currentUser =null;
-		if(userName!=null&&userPwd!=null) {
-			currentUser = userService.queryUserByLogin(userName, userPwd);
-			httpSession.setAttribute("currentUser", currentUser);
+//		User currentUser =null;
+//		if(userName!=null&&userPwd!=null) {
+//			currentUser = userService.queryUserByLogin(userName, userPwd);
+//			httpSession.setAttribute("currentUser", currentUser);
+//		}
+		User currentUser =(User)httpSession.getAttribute("currentUser");
+		if(currentUser!=null) {
+			model.addAttribute("currentUser",currentUser);
 		}
-		model.addAttribute("currentUser",currentUser);
 		return "main";
 	}
 	
 	@ResponseBody
 	@RequestMapping("validateUser")
-	public String validateUser(@RequestParam String userName,@RequestParam String userPwd) {
+	public String validateUser(@RequestParam String userName,@RequestParam String userPwd,HttpSession httpSession) {
 		User currentUser =null;
 		if(userName!=null&&userPwd!=null) {
 			currentUser = userService.queryUserByLogin(userName, userPwd);
 		}
 		if(currentUser!=null) {
+			httpSession.setAttribute("currentUser", currentUser);
 			return "true";
 		}else {
 			return "false";
@@ -61,8 +65,10 @@ public class MainController {
 	}
 	
 	@RequestMapping("enrol")
-	public String enrol(User user){
+	public String enrol(User user,HttpSession httpSession){
+		user.setId(String.valueOf(Math.random()).substring(2, 12));
 		userService.saveUser(user);
+		httpSession.setAttribute("currentUser", user);
 		return "main";
 	}
 	
@@ -97,5 +103,12 @@ public class MainController {
 	public String article(HttpSession httpSession,Model model) {
 		model.addAttribute("currentUser", httpSession.getAttribute("currentUser"));
 		return "article";
+	}
+	
+	@RequestMapping("loverDetail")
+	public String loverDetail(@RequestParam String loverId,Model model) {
+		User lover = userService.queryUserByUserId(loverId);
+		model.addAttribute("lover", lover);
+		return "loverDetail";
 	}
 }

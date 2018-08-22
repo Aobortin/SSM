@@ -11,9 +11,6 @@ a{
 input,select{
 	outline: 0;
 }
-.clearfix {
-  zoom: 1;
-}
 .clearfix:after {
    content:""; 
    display: block; 
@@ -29,6 +26,12 @@ img{
 	clear:both;
 	overflow: hidden;
   	zoom: 1;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
 }
 /* a:hover{
 	text-decoration: underline;
@@ -249,7 +252,7 @@ nav .nav .home-nav li#more a{
 }
 nav .nav .second-menu{
 	position: absolute;
-    left: 324px;
+    left: 276px;
     top: 55px;
     display: none;
     width: 113px;

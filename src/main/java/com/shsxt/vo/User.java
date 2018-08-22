@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
  * Created by lp on 2018/6/14.
  */
 public class User {
-    private Integer id;
+    private String id;
     private String userName;
     private String userPwd;
     private Integer sex;
@@ -25,15 +25,15 @@ public class User {
     private String remark1;
     private String remark2;
     
-    public Integer getId() {
-        return id;
-    }
+    public String getId() {
+		return id;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setId(String id) {
+		this.id = id;
+	}
 
-    public String getUserName() {
+	public String getUserName() {
         return userName;
     }
 

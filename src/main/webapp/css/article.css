@@ -20,7 +20,7 @@ section.page .content h1{
 	font: 32px/45px PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif;
     overflow: hidden;
     height: 45px;
-    margin-bottom: 7px;
+    margin:24px auto 7px;
     text-align:center;
 }
 section.page .content .write-time{

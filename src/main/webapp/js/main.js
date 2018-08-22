@@ -33,8 +33,8 @@ $(document).ready(function(){
 		$(".user-menu").css("display","none");
 	})
 	
-	$("img[alt]").on("click",function(){
-		var fromUserName =$("#currentUserName").val();
-		window.location.href="/SSM/chat?toUserName="+$(this).attr("alt")+"&fromUserName="+fromUserName;
-	})
+//	$("img[alt]").on("click",function(){
+//		var fromUserName =$("#currentUserName").val();
+//		window.location.href="/SSM/chat?toUserName="+$(this).attr("alt")+"&fromUserName="+fromUserName;
+//	})
 });

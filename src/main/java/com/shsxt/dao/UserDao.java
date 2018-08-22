@@ -13,12 +13,46 @@ import com.shsxt.vo.User;
  * Created by lp on 2018/6/14.
  */
 public interface UserDao {
-    public User queryUserByUserId(Integer userId);
+	@Select("select "
+			+ "id as id,"
+			+ "user_name as userName,"
+			+ "user_pwd as userPwd,"
+			+ "sex as sex,"
+			+ "birthday as birthday,"
+			+ "address as address,"
+			+ "marriage as marriage,"
+			+ "height as height,"
+			+ "education as education,"
+			+ "salary as salary,"
+			+ "phone as phone,"
+			+ "nick_name as nickName,"
+			+ "introduce as introduce,"
+			+ "remark1 as remark1,"
+			+ "remark2 as remark2"
+			+ " from user where id=#{loverId}")
+    public User queryUserByUserId(String loverId);
 
     public List<User> queryUsersByParams(UserQuery userQuery);
 
     public List<User> queryUsersByParams02(UserQuery userQuery);
 
+    @Select("select "
+			+ "id as id,"
+			+ "user_name as userName,"
+			+ "user_pwd as userPwd,"
+			+ "sex as sex,"
+			+ "birthday as birthday,"
+			+ "address as address,"
+			+ "marriage as marriage,"
+			+ "height as height,"
+			+ "education as education,"
+			+ "salary as salary,"
+			+ "phone as phone,"
+			+ "nick_name as nickName,"
+			+ "introduce as introduce,"
+			+ "remark1 as remark1,"
+			+ "remark2 as remark2"
+			+ " from user where user_name =#{userName} and user_pwd=#{userPwd}")
 	public User queryUserByLogin(@Param("userName")String userName, @Param("userPwd")String userPwd);
 	
 	@Insert("INSERT INTO user("

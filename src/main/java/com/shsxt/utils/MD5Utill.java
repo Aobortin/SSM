@@ -55,4 +55,8 @@ public class MD5Utill {
         }
         return new String(resultCharArray);
     }
+    
+    public static void main(String[] args) {
+		System.out.println(String.valueOf(Math.random()).substring(2, 12));
+	}
 }

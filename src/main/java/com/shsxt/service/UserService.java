@@ -21,8 +21,8 @@ public class UserService {
     @Resource
     private UserDao userDao;
 
-    public  User queryUserByUserId(Integer userId){
-        return userDao.queryUserByUserId(userId);
+    public  User queryUserByUserId(String loverId){
+        return userDao.queryUserByUserId(loverId);
     }
     
     public User queryUserByLogin(String userName,String userPwd) {

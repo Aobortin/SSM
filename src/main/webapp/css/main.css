@@ -34,6 +34,9 @@
     text-indent: -9999px;
     background: url(../image/sprite.png) no-repeat 0 -755px;
 }
+.slider-wrap .banner .slider-prev:hover{
+	background-position: 0 -880px;
+}
 .slider-wrap .banner .slider-next{
 	position: absolute;
 	display:none;
@@ -45,6 +48,9 @@
     margin-top: -60px;
     text-indent: -9999px;
     background: url(../image/sprite.png) no-repeat 0 -1130px;
+}
+.slider-wrap .banner .slider-next:hover{
+	background-position: 0 -1005px;
 }
 .slider-wrap .slider-pages{
 	position: absolute;
