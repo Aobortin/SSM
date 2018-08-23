@@ -5,7 +5,7 @@ $(function(){
 		});
 		$(e.currentTarget).addClass("current");
 		$(".album-display-img").children("img").attr("src",$(this).children("img").attr("src"));
-	})
+	});
 	$(".arr-l").on("click",function(){
 		var num=0;
 		$(".album-thumbs ul li").each(function(i){
@@ -18,7 +18,7 @@ $(function(){
 		});
 		$(".album-display-img").children("img").attr("src",$(".album-thumbs ul li").eq(num).children("img").attr("src"));
 		$(".album-thumbs ul li").eq(num).addClass("current");
-	})
+	});
 	$(".arr-r").on("click",function(){
 		var num=0;
 		$(".album-thumbs ul li").each(function(i){
@@ -31,7 +31,7 @@ $(function(){
 		});
 		$(".album-display-img").children("img").attr("src",$(".album-thumbs ul li").eq(num).children("img").attr("src"));
 		$(".album-thumbs ul li").eq(num).addClass("current");
-	})
+	});
 	$(".mood .inner-desc li").on("click",function(e){
 		var num=0;
 		$(".mood .inner-desc li").each(function(i){
@@ -48,5 +48,5 @@ $(function(){
 				$(this).removeClass("hide");
 			}
 		});
-	})
-})
+	});
+});

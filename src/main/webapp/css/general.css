@@ -33,6 +33,12 @@ img{
 .fr{
 	float: right;
 }
+.hide{
+	display:none;
+}
+.show{
+	display: block;
+}
 /* a:hover{
 	text-decoration: underline;
 } */

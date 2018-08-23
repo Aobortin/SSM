@@ -11,7 +11,8 @@
 	width: 1265px;
 	height: 445px;
     position: absolute;
-    display: list-item;
+    opacity: 0;
+    transition:opacity 1s ease 0s;
 }
 .slider-wrap .banner li a{
 	display:block;
@@ -21,6 +22,12 @@
 }
 .slider-wrap .banner li:nth-child(1) a{
 	background: url(../image/banner-bg1.jpg) no-repeat center top;
+}
+.slider-wrap .banner li:nth-child(2) a{
+	background: url(../image/banner-bg2.jpg) no-repeat center top;
+}
+.slider-wrap .banner li:nth-child(3) a{
+	background: url(../image/banner-bg3.jpg) no-repeat center top;
 }
 .slider-wrap .banner .slider-prev{
 	position: absolute;
@@ -73,6 +80,9 @@
     font-size: 0;
     background: url(../image/sprite.png) no-repeat 0 -22px;
 }
+.slider-wrap .slider-pages li a.hover{
+	background-position: 0 -37px;
+}
 section.content{
     position: relative;
     overflow: hidden;
@@ -100,8 +110,11 @@ section.content .subContentM .SelectHotSonglist{
 	overflow: hidden;
 	margin-bottom:15px;
 }
-.SelectHotSonglist .item-content{
-	
+.SelectHotSonglist .item-content img{
+	transition:transform 0.1s ease 0s;
+}
+.SelectHotSonglist .item-content img:hover{
+	transform:scale(1.05,1.05);
 }
 .SelectHotSonglist .item-content .cptBig{
 	float:left;

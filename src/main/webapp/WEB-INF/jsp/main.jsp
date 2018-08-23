@@ -13,7 +13,7 @@
 	<div class="slider-wrap">
 		<div class="banner">
 			<ul>
-				<li><a href="">换肤新体验 酷狗英雄主题</a></li>
+				<li style="opacity:1;"><a href="">换肤新体验 酷狗英雄主题</a></li>
 				<li><a href="">繁星网 缔造星途神话</a></li>
 				<li><a href="">酷狗蓝牙耳机，听歌 通话 煲剧10小时</a></li>
 			</ul>
@@ -22,9 +22,9 @@
 		</div>
 		<div class="slider-pages">
 			<ul>
-				<li><a href="">1</a></li>
-				<li><a href="">2</a></li>
-				<li><a href="">3</a></li>
+				<li><a href="javascript:void(0);"  class="hover">1</a></li>
+				<li><a href="javascript:void(0);">2</a></li>
+				<li><a href="javascript:void(0);">3</a></li>
 			</ul>
 		</div>
 	</div>
