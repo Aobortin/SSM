@@ -111,4 +111,10 @@ public class MainController {
 		model.addAttribute("lover", lover);
 		return "loverDetail";
 	}
+	
+	@RequestMapping("member")
+	public String member(HttpSession httpSession,Model model) {
+		model.addAttribute("currentUser", httpSession.getAttribute("currentUser"));
+		return "member";
+	}
 }

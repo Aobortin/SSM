@@ -31,7 +31,7 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 			<ul class="nav-list">
 				<li><a href="${basePath}/SSM/chat">客服中心</a></li>
 				<li><a href="">招贤纳士</a></li>
-				<li><a href="">会员中心</a></li>
+				<li><a href="${basePath}/SSM/member">会员中心</a></li>
 			</ul>
 			<div class="login-area">
 				<c:choose>
