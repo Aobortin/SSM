@@ -146,7 +146,6 @@
 }
 .member-privilege ul{
 	border: 1px solid #f2f2f2;
-	padding-bottom:21px;
 }
 .member-privilege li{
 	color: #5e5e5e;
@@ -163,4 +162,46 @@
 .member-privilege li p{
 	width:33%;
 	text-indent:80px;
+}
+.member-privilege li.tb{
+	height: 58px;
+    line-height: 58px;
+}
+.member-privilege li.tb span{
+	margin-left:80px;
+	font-weight: bold;
+}
+.member-privilege li.tbb{
+	position: relative;
+    padding: 25px 0 0 0;
+    height: 70px;
+    border-bottom: none;
+    text-align: center;
+}
+.member-privilege li.tbb a{
+	cursor:pointer;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 260px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    border-radius: 2px;
+    color: #fff;
+    font-family: "Microsoft Yahei";
+    text-decoration: none;
+    background:#ff5b5b;
+    -webkit-transition: border-color .2s linear,outline-color .4s linear,box-shadow .2s linear,background-color .2s linear,color .2s linear;
+}
+.member-privilege li.tbb a:hover{
+	background-color: #eb5454;
+}
+.member-privilege li.tbb span{
+	position: absolute;
+	color: #ff5b5b;
+	left: 65%;
+    top: 35px;
+    padding: 0 5px 0 20px;
+    font-weight: bold;
 }

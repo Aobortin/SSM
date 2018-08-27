@@ -1,6 +1,7 @@
 package com.shsxt.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -13,8 +14,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.shsxt.service.ArticleService;
 import com.shsxt.service.UserService;
 import com.shsxt.utils.FileHandleUtil;
+import com.shsxt.vo.Article;
 import com.shsxt.vo.User;
 
 @Controller
@@ -22,6 +25,9 @@ import com.shsxt.vo.User;
 public class MainController {
 	@Resource
     private UserService userService;
+	
+	@Resource
+    private ArticleService articleService;
 	
 	@RequestMapping("main")
 	public String login(@RequestParam(required=false) String userName,@RequestParam(required=false) String userPwd,Model model,HttpSession httpSession) {
@@ -74,7 +80,10 @@ public class MainController {
 	
 	@RequestMapping("billBoard")
 	public String billBoard(HttpSession httpSession,Model model) {
-		model.addAttribute("currentUser", httpSession.getAttribute("currentUser"));
+		User currentUser = (User) httpSession.getAttribute("currentUser");
+		List<Article> articles = articleService.queryAllArticleByUser(currentUser.getId());
+		model.addAttribute("currentUser", currentUser);
+		model.addAttribute("articles",articles);
 		return "billBoard";
 	}
 	
@@ -99,15 +108,9 @@ public class MainController {
 	    return "userCenter"; 
 	}
 
-	@RequestMapping("article")
-	public String article(HttpSession httpSession,Model model) {
-		model.addAttribute("currentUser", httpSession.getAttribute("currentUser"));
-		return "article";
-	}
-	
 	@RequestMapping("loverDetail")
 	public String loverDetail(@RequestParam String loverId,Model model) {
-		User lover = userService.queryUserByUserId(loverId);
+		User lover = userService.queryUserById(loverId);
 		model.addAttribute("lover", lover);
 		return "loverDetail";
 	}

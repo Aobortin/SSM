@@ -14,15 +14,15 @@ import com.shsxt.query.UserQuery;
 import com.shsxt.vo.User;
 
 /**
- * Created by lp on 2018/6/14.
+ * Created by wanglin on 2018/7/14.
  */
 @Service
 public class UserService {
     @Resource
     private UserDao userDao;
 
-    public  User queryUserByUserId(String loverId){
-        return userDao.queryUserByUserId(loverId);
+    public  User queryUserById(String loverId){
+        return userDao.queryUserById(loverId);
     }
     
     public User queryUserByLogin(String userName,String userPwd) {

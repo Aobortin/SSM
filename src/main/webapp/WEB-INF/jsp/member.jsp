@@ -66,6 +66,61 @@
 					<p class="fl">珍爱网APP特权大礼包</p>
 					<p class="fr">92%</p>
 				</li>
+				<li>
+					<p class="fl">实时在线聊天</p>
+					<p class="fr">95%</p>
+				</li>
+				<li>
+					<p class="fl">全站展示推荐</p>
+					<p class="fr">97%</p>
+				</li>
+				<li>
+					<p class="fl">隐身浏览</p>
+					<p class="fr">46%</p>
+				</li>
+				<li>
+					<p class="fl">查看身份证信息</p>
+					<p class="fr">86%</p>
+				</li>
+				<li>
+					<p class="fl">尊贵身份标识</p>
+					<p class="fr">100%</p>
+				</li>
+				<li>
+					<p class="fl">会员专属装扮</p>
+					<p class="fr">64%</p>
+				</li>
+				<li>
+					<p class="fl">上传更多照片</p>
+					<p class="fr">71%</p>
+				</li>
+				<li>
+					<p class="fl">更高诚信值</p>
+					<p class="fr">100%</p>
+				</li>
+				<li>
+					<p class="fl">无限制浏览照片</p>
+					<p class="fr">82%</p>
+				</li>
+				<li>
+					<p class="fl">获取情敌动向</p>
+					<p class="fr">85%</p>
+				</li>
+				<li>
+					<p class="fl">隐私保护</p>
+					<p class="fr">57%</p>
+				</li>
+				<li>
+					<p class="fl">送礼短信提醒</p>
+					<p class="fr">83%</p>
+				</li>
+				<li class="tb">
+					<span>合计：14项特权，总有一项帮到您！</span>
+				</li>
+				<li class="tbb">
+					<a href="javascript:void(0)">立即开通</a>
+					<span>399元/年</span>
+				</li>
 			</ul>
 		</div>
 	</section>

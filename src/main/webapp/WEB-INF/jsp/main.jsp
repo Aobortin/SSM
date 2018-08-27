@@ -287,7 +287,7 @@
                 			<img alt="" src="image/Mike.jpg">
                 		</a>
                 	</div>
-                	<ul class="list-menu">
+                	<ul class="list-menu clearfix">
                 		<li class="list-hover">page1</li>
                 		<li>page2</li>
                 		<li>page3</li>

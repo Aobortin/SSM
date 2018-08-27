@@ -17,12 +17,12 @@
 			<div class="avatar-txt">
 				<p><a href="javascript:void(0)">${currentUser.nickName}</a></p>
 				<p>(账号:${currentUser.userName})</p>
-				<p><a href="">开通酷狗豪华 VIP>></a></p>
+				<p><a href="">开通佳人豪华 VIP>></a></p>
 			</div>
 		</div>
 		<div class="avatar-content">
 			<div class="content-title clearfix">
-				<h4>我的酷狗</h4>
+				<h4>我的信息</h4>
 				<span>Personal information</span>
 			</div>
 			<div class="content-body">
@@ -31,7 +31,7 @@
 						<li class="selected"><a href="javascript:void(0)">修改头像</a></li>
 						<li><a href="javascript:void(0)">编辑资料</a></li>
 						<li><a href="javascript:void(0)">修改密码</a></li>
-						<li><a href="javascript:void(0)">账号安全</a></li>
+						<li><a href="javascript:void(0)">我的文章</a></li>
 					</ul>
 				</div>
 				<div class="module-body clearfix">
@@ -47,6 +47,21 @@
 							<a type="button" class="btn upload" >上传</a>
 						</form>
 					</div>
+				</div>
+				<div class="module-body clearfix hide">
+					<label for="nickName">修改昵称</label><input id="nickName" name="nickName" value="${currentUser.nickName}"/>
+				</div>
+				<div class="module-body clearfix hide">
+					<label for="userPwd">修改密码</label><input type="password" id="userPwd" name="userPwd" value="${currentUser.userPwd}"/>
+				</div>
+				<div class="module-body clearfix hide">
+					<form name="writeArticle" action="${basePath}/SSM/writeArticle" method="post">
+						<input type="hidden" name="authorId" value="${currentUser.id}"/>
+						<input type="hidden" name="authorName" value="${currentUser.nickName}"/>
+						<input name="articleTitle" placeholder="请在此输入标题"/>
+						<textarea rows="10" cols="30" placeholder="请在此输入内容" name="articleContent"></textarea>
+						<a type="button" class="btn submit" >提交</a>
+					</form>
 				</div>
 			</div>
 		</div>

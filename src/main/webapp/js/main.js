@@ -1,49 +1,29 @@
 var timeoutId=0;
 var num=0;
-$(document).ready(function(){
+$(function(){
 	$(".home-nav").children().eq(0).css("backgroundColor","#0c8ed9");
-	$("#more").on("mouseover",function(){
-		$(".second-menu").css("display","block");
-		$("#more a").css("backgroundImage","url(image/arrowMoreu.png)");
-	}).on("mouseout",function(){
-		$(".second-menu").css("display","none");
-		$("#more a").css("backgroundImage","url(image/arrowMored.png)");
-	});
-	$(".second-menu").on("mouseover",function(){
-		$(".second-menu").css("display","block");
-		$("#more a").css("backgroundImage","url(image/arrowMoreu.png)");
-	}).on("mouseout",function(){
-		$(".second-menu").css("display","none");
-		$("#more a").css("backgroundImage","url(image/arrowMored.png)");
-	});
-	$(".banner").on("mouseover",function(){
-		$(".slider-prev").css("display","block");
-		$(".slider-next").css("display","block");
-	}).on("mouseout",function(){
-		$(".slider-prev").css("display","none");
-		$(".slider-next").css("display","none");
-	})
-	
-	$(".login-area").on("mouseover",function(){
-		$(".user-menu").css("display","block");
-	}).on("mouseout",function(){
-		$(".user-menu").css("display","none");
-	})
-	$(".user-menu").on("mouseover",function(){
-		$(".user-menu").css("display","block");
-	}).on("mouseout",function(){
-		$(".user-menu").css("display","none");
-	})
 //	在线聊天开启方式
 //	$("img[alt]").on("click",function(){
 //		var fromUserName =$("#currentUserName").val();
 //		window.location.href="/SSM/chat?toUserName="+$(this).attr("alt")+"&fromUserName="+fromUserName;
 //	})
+	/* 轮播器 */
 	var slider_pics=$(".banner li");//轮播图
 	var dots=$(".slider-pages li a");//定位点
 	var left_arrow=$(".slider-prev");//左箭头
 	var right_arrow=$(".slider-next");//右箭头
 	start_slider(slider_pics,left_arrow,right_arrow,dots);
+	
+	var list_menu_li=$(".list-menu li");
+	list_menu_li.on("click",function(e){
+		list_menu_li.each(function(i){
+			if(this==e.currentTarget){
+				$(this).addClass("list-hover");
+			}else{
+				$(this).removeClass("list-hover");
+			}
+		});
+	});
 });
 
 function start_slider(slider_pics,left_arrow,right_arrow,dots){

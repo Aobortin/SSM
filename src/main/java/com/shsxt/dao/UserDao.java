@@ -10,7 +10,7 @@ import com.shsxt.query.UserQuery;
 import com.shsxt.vo.User;
 
 /**
- * Created by lp on 2018/6/14.
+ * Created by wanglin on 2018/7/14.
  */
 public interface UserDao {
 	@Select("select "
@@ -30,7 +30,7 @@ public interface UserDao {
 			+ "remark1 as remark1,"
 			+ "remark2 as remark2"
 			+ " from user where id=#{loverId}")
-    public User queryUserByUserId(String loverId);
+    public User queryUserById(String loverId);
 
     public List<User> queryUsersByParams(UserQuery userQuery);
 

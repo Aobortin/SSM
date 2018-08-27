@@ -300,6 +300,7 @@ section.content .limitHight .HotRadio{
     display: none;
 }
 section.content .limitHight .HotSinger{
+	position:relative;
 	float: right;
 	width:330px;
 }
@@ -338,7 +339,10 @@ section.content .limitHight .HotSinger{
     float: left;
 }
 .HotSinger .list-menu{
-	padding-top: 17px;
+/* 	padding-top: 17px; */
+	position:absolute;
+	left:141px;
+	bottom:-20px;
     height: 6px;
     line-height: 6px;
     clear:both;

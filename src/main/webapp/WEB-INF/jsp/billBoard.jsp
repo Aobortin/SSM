@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>	
 <html>
 <head>
@@ -11,38 +12,38 @@
 <body>
 	<section class="main">
 		<div class="side-bar">
-			<h3><a href="">热门榜单<i>向上箭头</i></a></h3>
+			<h3><a href="javascript:void(0)">热门榜单<i>向上箭头</i></a></h3>
 			<ul>
-				<li><a href="" class="current">酷狗飙升榜</a></li>
-				<li><a href="">酷狗TOP500</a></li>
-				<li><a href="">网络红歌榜</a></li>
-				<li><a href="">DJ热歌榜</a></li>
-				<li><a href="">华语新歌榜</a></li>
-				<li><a href="">欧美新歌榜</a></li>
-				<li><a href="">韩国新歌榜</a></li>
-				<li><a href="">日本新歌榜</a></li>
-				<li><a href="">明日之子第二季榜</a></li>
-				<li><a href="">2018中国好声音榜</a></li>
-				<li><a href="">金曲捞第二季榜</a></li>
-				<li><a href="">2018跨界歌王榜</a></li>
+				<li><a href="javascript:void(0)" class="current">酷狗飙升榜</a></li>
+				<li><a href="javascript:void(0)">酷狗TOP500</a></li>
+				<li><a href="javascript:void(0)">网络红歌榜</a></li>
+				<li><a href="javascript:void(0)">DJ热歌榜</a></li>
+				<li><a href="javascript:void(0)">华语新歌榜</a></li>
+				<li><a href="javascript:void(0)">欧美新歌榜</a></li>
+				<li><a href="javascript:void(0)">韩国新歌榜</a></li>
+				<li><a href="javascript:void(0)">日本新歌榜</a></li>
+				<li><a href="javascript:void(0)">明日之子第二季榜</a></li>
+				<li><a href="javascript:void(0)">2018中国好声音榜</a></li>
+				<li><a href="javascript:void(0)">金曲捞第二季榜</a></li>
+				<li><a href="javascript:void(0)">2018跨界歌王榜</a></li>
 			</ul>
-			<h3><a href="">特色音乐榜<i>向上箭头</i></a></h3>
+			<h3><a href="javascript:void(0)">特色音乐榜<i>向上箭头</i></a></h3>
 			<ul>
-				<li><a href="">电音热歌榜</a></li>
-				<li><a href="">影视金曲榜</a></li>
-				<li><a href="">ACG热歌榜</a></li>
-				<li><a href="">粤语金曲榜</a></li>
-				<li><a href="">欧美金曲榜</a></li>
-				<li><a href="">古风金曲榜</a></li>
-				<li><a href="">纯音乐榜</a></li>
+				<li><a href="javascript:void(0)">电音热歌榜</a></li>
+				<li><a href="javascript:void(0)">影视金曲榜</a></li>
+				<li><a href="javascript:void(0)">ACG热歌榜</a></li>
+				<li><a href="javascript:void(0)">粤语金曲榜</a></li>
+				<li><a href="javascript:void(0)">欧美金曲榜</a></li>
+				<li><a href="javascript:void(0)">古风金曲榜</a></li>
+				<li><a href="javascript:void(0)">纯音乐榜</a></li>
 			</ul>
-			<h3><a href="">全球榜<i>向上箭头</i></a></h3>
+			<h3><a href="javascript:void(0)">全球榜<i>向上箭头</i></a></h3>
 			<ul>
-				<li><a href="">美国BillBoard榜</a></li>
-				<li><a href="">英国单曲榜</a></li>
-				<li><a href="">日本公信榜</a></li>
-				<li><a href="">韩国M-net音乐榜</a></li>
-				<li><a href="">中国TOP排行榜</a></li>
+				<li><a href="javascript:void(0)">美国BillBoard榜</a></li>
+				<li><a href="javascript:void(0)">英国单曲榜</a></li>
+				<li><a href="javascript:void(0)">日本公信榜</a></li>
+				<li><a href="javascript:void(0)">韩国M-net音乐榜</a></li>
+				<li><a href="javascript:void(0)">中国TOP排行榜</a></li>
 			</ul>
 		</div>
 		<div class="content">
@@ -52,27 +53,15 @@
 			</div>
 			<div class="rank-wrap">
 				<ul>
-					<li>
-						<span class="btn_check"></span>
-						<span class="num top"><strong>1</strong></span>
-						<span class="tip"></span>
-						<a href="/SSM/article">蔡徐坤 - It's You</a>
-						<span class="update-time">3:45</span>
-					</li>
-					<li>
-						<span class="btn_check"></span>
-						<span class="num top"><strong>2</strong></span>
-						<span class="tip"></span>
-						<a href="">蔡徐坤 - You Can Be My GirlFriend</a>
-						<span class="update-time">3:45</span>
-					</li>
-					<li>
-						<span class="btn_check"></span>
-						<span class="num top"><strong>3</strong></span>
-						<span class="tip"></span>
-						<a href="">蔡徐坤 - Pull Up</a>
-						<span class="update-time">3:45</span>
-					</li>
+					<c:forEach items="${articles}" var="article" varStatus="status">
+						<li>
+							<span class="btn_check"></span>
+							<span class="num top"><strong>${status.count}</strong></span>
+							<span class="tip"></span>
+							<a href="/SSM/article?articleId=${article.id}">${article.articleTitle}</a>
+							<span class="update-time">${article.createTime}</span>
+						</li>
+					</c:forEach>
 					<li>
 						<span class="btn_check"></span>
 						<span class="num"><strong>4</strong></span>
