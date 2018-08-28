@@ -1,4 +1,11 @@
 $(function(){
+	$(this).on("keydown",function(event){
+		if(event.keyCode==13){
+			event.preventDefault();
+			$(".submit").click();
+		}
+	});
+	
 	$(".submit").on("click",function(){
 		var userName=$("#userName").val();
 		var userPwd=$("#userPwd").val();

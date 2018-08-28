@@ -116,6 +116,9 @@ section.content .subContentM .SelectHotSonglist{
 .SelectHotSonglist .item-content img:hover{
 	transform:scale(1.05,1.05);
 }
+.SelectHotSonglist .item-content cpt{
+	overflow: hidden;
+}
 .SelectHotSonglist .item-content .cptBig{
 	float:left;
 	width: 325px;

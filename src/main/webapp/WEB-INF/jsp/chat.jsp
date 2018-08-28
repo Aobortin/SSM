@@ -27,10 +27,10 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 <input type="hidden" value="${fromUser.userName}" id="fromUserName"/>
 <input type="hidden" value="${fromUser.nickName}" id="fromNickName"/>
 <input type="hidden" value="${toUserName}" id="toUserName"/>
-<header class="am-topbar am-topbar-fixed-top">
+	<header class="am-topbar am-topbar-fixed-top">
 	  <div class="am-container">
 	    <h1 class="am-topbar-brand">
-	      <a href="#">聊天室</a>
+	      <a href="#">聊天</a>
 	    </h1>
 	    <div class="am-collapse am-topbar-collapse" id="collapse-head">
 	      <ul class="am-nav am-nav-pills am-topbar-nav">
@@ -58,11 +58,11 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 			    <div class="am-comment-main" >
 			        <header class="am-comment-hd">
 			            <div class="am-comment-meta">
-			              <a ff="nickname" href="#link-to-user" class="am-comment-author">某人</a>
-			              <time ff="msgdate" datetime="" title="">2014-7-12 15:30</time>
+			              <a role="nickname" href="#link-to-user" class="am-comment-author">某人</a>
+			              <time role="msgdate" datetime="" title="">2014-7-12 15:30</time>
 			            </div>
 			        </header>
-			     <div ff="content" class="am-comment-bd">此处是消息内容</div>
+			     <div role="content" class="am-comment-bd">此处是消息内容</div>
 			    </div>
 			</li>
 		</ul>

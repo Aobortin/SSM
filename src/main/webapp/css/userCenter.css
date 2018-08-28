@@ -142,3 +142,48 @@ section.info-center .avatar-content{
 	color: #54ade7;
     border-color: #54ade7;
 }
+.module-body .article-title{
+	color: rgb(0, 0, 0);
+    font-size: 26px;
+    font-family: 微软雅黑;
+    font-weight: normal;
+    background-color: transparent;
+    border-width: 1px;
+    border-style: dashed;
+    border-color: rgb(204, 204, 204);
+    border-image: initial;
+    padding: 8px 0px;
+    height: 30px;
+    text-align: center;
+}
+.module-body .article-content{
+	width: 100%;
+    height: 100px;
+    resize: vertical;
+    margin-top:10px;
+    border: 1px solid rgb(0, 0, 0);
+    font-size: 14px;
+    word-break: break-all;
+    flex-direction: column;
+    cursor: text;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-rendering: auto;
+}
+.module-body a.submit{
+	display: inline-block;
+    width: 79px;
+    height: 23px;
+    line-height: 23px;
+    box-shadow: rgb(217, 217, 217) 0px 1px 0px 0px;
+    background-color: rgb(92, 170, 230);
+    color:#fff;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(72, 153, 215);
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right:5px;
+}

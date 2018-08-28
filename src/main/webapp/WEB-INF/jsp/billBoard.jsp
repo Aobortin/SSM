@@ -56,89 +56,19 @@
 					<c:forEach items="${articles}" var="article" varStatus="status">
 						<li>
 							<span class="btn_check"></span>
-							<span class="num top"><strong>${status.count}</strong></span>
+							<c:choose>
+								<c:when test="${status.count<=3}">
+									<span class="num top"><strong>${status.count}</strong></span>
+								</c:when>
+								<c:otherwise>
+									<span class="num"><strong>${status.count}</strong></span>
+								</c:otherwise>
+							</c:choose>
 							<span class="tip"></span>
 							<a href="/SSM/article?articleId=${article.id}">${article.articleTitle}</a>
 							<span class="update-time">${article.createTime}</span>
 						</li>
 					</c:forEach>
-					<li>
-						<span class="btn_check"></span>
-						<span class="num"><strong>4</strong></span>
-						<span class="tip"></span>
-						<a href="">M哥 - 又一次爱上你</a>
-						<span class="update-time">3:45</span>
-					</li>
-					<li>
-						<span class="btn_check"></span>
-						<span class="num"><strong>5</strong></span>
-						<span class="tip"></span>
-						<a href="">龙梅子、老猫 - 都说</a>
-						<span class="update-time">3:45</span>
-					</li>
-					<li>
-						<span class="btn_check"></span>
-						<span class="num"><strong>6</strong></span>
-						<span class="tip"></span>
-						<a href="">洛天依 - 相知相爱到别离</a>
-						<span class="update-time">3:45</span>
-					</li>
-					<li>
-						<span class="btn_check"></span>
-						<span class="num"><strong>7</strong></span>
-						<span class="tip"></span>
-						<a href="">门丽 - 今夜又唱老情歌</a>
-						<span class="update-time">3:45</span>
-					</li>
-					<li>
-						<span class="btn_check"></span>
-						<span class="num"><strong>8</strong></span>
-						<span class="tip"></span>
-						<a href="">iKON - 바람 (FREEDOM)</a>
-						<span class="update-time">3:45</span>
-					</li>
-					<li>
-						<span class="btn_check"></span>
-						<span class="num"><strong>9</strong></span>
-						<span class="tip"></span>
-						<a href="">蒋家驹 (蒋蒋) - 偶尔</a>
-						<span class="update-time">3:45</span>
-					</li>
-					<li>
-						<span class="btn_check"></span>
-						<span class="num"><strong>10</strong></span>
-						<span class="tip"></span>
-						<a href="">霍尊 - 离人泪【寻仙十周年主题曲】</a>
-						<span class="update-time">3:45</span>
-					</li>
-					<li>
-						<span class="btn_check"></span>
-						<span class="num"><strong>11</strong></span>
-						<span class="tip"></span>
-						<a href="">莫言 - 黄梅戏</a>
-						<span class="update-time">3:45</span>
-					</li>
-					<li>
-						<span class="btn_check"></span>
-						<span class="num"><strong>12</strong></span>
-						<span class="tip"></span>
-						<a href="">音乐走廊、依然 - 不要对我说再见</a>
-						<span class="update-time">3:45</span>
-					</li>
-					<li>
-						<span class="btn_check"></span>
-						<span class="num"><strong>13</strong></span>
-						<span class="tip"></span>
-						<a href="">李梓轩 - 紫色烟花</a>
-						<span class="update-time">3:45</span>
-					</li>
-					<li>
-						<span class="btn_check"></span>
-						<span class="num"><strong>14</strong></span>
-						<span class="tip"></span>
-						<a href="">李俊佑 - 醉千年</a>
-						<span class="update-time">3:45</span>
-					</li>
 				</ul>
 			</div>
 		</div>

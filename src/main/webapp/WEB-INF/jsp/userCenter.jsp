@@ -58,8 +58,8 @@
 					<form name="writeArticle" action="${basePath}/SSM/writeArticle" method="post">
 						<input type="hidden" name="authorId" value="${currentUser.id}"/>
 						<input type="hidden" name="authorName" value="${currentUser.nickName}"/>
-						<input name="articleTitle" placeholder="请在此输入标题"/>
-						<textarea rows="10" cols="30" placeholder="请在此输入内容" name="articleContent"></textarea>
+						<input name="articleTitle" class="article-title" maxlength="128" placeholder="请在此输入标题"/>
+						<textarea rows="10" cols="30" placeholder="请在此输入内容" name="articleContent" class="article-content"></textarea>
 						<a type="button" class="btn submit" >提交</a>
 					</form>
 				</div>

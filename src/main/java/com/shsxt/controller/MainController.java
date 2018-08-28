@@ -105,7 +105,7 @@ public class MainController {
 		String path="/Users/linwang/Documents/SSM/src/main/webapp/image/avatar/";
 		User currentUser=(User)httpSession.getAttribute("currentUser");
 		FileHandleUtil.upload(request, path,currentUser.getUserName());
-	    return "userCenter"; 
+	    return "userCenter";
 	}
 
 	@RequestMapping("loverDetail")

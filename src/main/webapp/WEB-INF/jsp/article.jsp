@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>	
 <html>
 <head>
@@ -14,10 +15,14 @@
 			<%-- <div class="avatar-cover">
 				<img alt="" src="image/avatar/${currentUser.userName}.jpeg"/>
 			</div> --%>
-			<audio autoplay controls="controls" loop="loop" preload="auto"
-		            	src="${article.embedUrl}">
-		      		<!-- 你的浏览器版本太低，不支持audio标签 -->
-			</audio>
+			<div class="embed-plugin">
+				<c:if test="${article.embedUrl!=null}">
+					<audio autoplay controls="controls" loop="loop" preload="auto"
+				            	src="${article.embedUrl}">
+				      		<!-- 你的浏览器版本太低，不支持audio标签 -->
+					</audio>
+				</c:if>
+			</div>
 			<h1>${article.articleTitle}</h1>
 			<p class="write-time">${article.createTime}</p>
 			<div class="article">
