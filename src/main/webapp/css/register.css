@@ -1,29 +1,6 @@
 body{
 	background:rgb(246,246,246);
 }
-.c{
-	padding-top:20px;
-	height:32px;
-}
-.c dt,.c dd{
-	float:left;
-	font-size:12px;
-	color:#666;
-	height:32px;
-	line-height:32px;
-	/* cursor: pointer; */
-}
-.c dt{
-	width:85px;
-	text-align:right;
-}
-.c dd{
-	width:327px;
-	padding-left:13px;
-}
-.c .er{
-	width:220px;
-}
 section.main{
 	width:960px;
 	margin:0 auto;
@@ -44,7 +21,6 @@ section.main .enrol-left .left-poster{
 	background:url(../image/register_poster.jpeg) no-repeat 25% 200%;
 	text-indent:-9999px;
 }
-
 section.main .enrol-right{
 	width:670px;
 	float:right;
@@ -62,7 +38,7 @@ section.main .enrol-right h1{
 	font-weight:normal;
 	font-size:18px;
 }
-section.main .enrol-right span{
+section.main .enrol-right span.shoulder{
 	width:84px;
 	height:42px;
 	text-indent:-9999px;
@@ -87,26 +63,113 @@ section.main .enrol-right .enrol-remind{
 	text-align:center;
 	margin:0 30px 0; 
 }
-section.main .enrol-right .sex{
-	padding-left:28px;
+.enrol-right .c{
+	position:relative;
+	padding-top:20px;
+	height:32px;
 }
-section.main .enrol-right .male{
-	margin-right:20px;
-	background:url(../image/male.png) no-repeat center center;
+.enrol-right .c dt,.c dd{
+	height: 40px;
+	float:left;
+	font-size:16px;
+	color:#666;
+	line-height:40px;
 }
-section.main .enrol-right .female{
-	background:url(../image/female.png) no-repeat center center;
+.enrol-right .c dt{
+	width:85px;
+	text-align:right;
 }
-section.main .enrol-right .form-line{
+.enrol-right .c dd{
+    line-height: 40px;
+    box-sizing: border-box;
+	margin-left:50px;
+}
+#amount{
+	border:none;
+	color:#f6931f;
+	font-weight:bold;
+	left:120px;
+	top:0px;
+	position: absolute;
+}
+#slider-range-min{
+	width:210px;
+	top:13px;
+	left:8px;
+	float: right;
+}
+.c dd input{
+    display: block;
+    width: 100%;
+    /* height: 100%; */
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+.enrol-right .c label{
+	padding-right:20px;
+	height:22px;
+	line-height: 22px;
+}
+.enrol-right .c .label{
+	display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #979797;
+    box-sizing: border-box;
+}
+.enrol-right .c .checked{
+	border: 3px solid #8b76f9;
+}
+.enrol-right .education ul{
+	width:227px;
+	position: absolute;
+	left:135px;
+	margin-top: -4px;
+	border-radius: 4px;
+    box-shadow: 0 2px 8px 0 hsla(0,0%,64%,.3);
+	background: #fff;
+	z-index:10;
+	display: none;
+}
+.enrol-right .education li{
+	transition: background-color .3s;
+	text-align: center;
+}
+.enrol-right .education li:hover{
+	background-color: #d9d9d9;
+}
+
+.enrol-right .salary ul{
+	width:227px;
+	position: absolute;
+	left:135px;
+	margin-top: -4px;
+	border-radius: 4px;
+    box-shadow: 0 2px 8px 0 hsla(0,0%,64%,.3);
+	background: #fff;
+	z-index:10;
+	display: none;
+}
+.enrol-right .salary li{
+	transition: background-color .3s;
+	text-align: center;
+}
+.enrol-right .salary li:hover{
+	background-color: #d9d9d9;
+}
+
+.enrol-right #submitUser .form-line{
 	text-indent:-9999px;
 	width:610px;
 	height:21px;
 	border-bottom:1px dashed #ddd;
 }
-section.main .enrol-right dl.intro{
-	height:180px;
-}
-section.main .enrol-right .submit-btn{
+.enrol-right #submitUser .submit-btn{
 	display:block;
 	width:278px;
 	height:49px;
@@ -116,25 +179,29 @@ section.main .enrol-right .submit-btn{
 	text-align:center;
 	border:1px solid #aaa;
 	border-radius: 5px;
-	margin:0 auto;
+	margin:30px auto 0;
 }
-section.main .enrol-right .submit-btn+p{
+.enrol-right #submitUser .submit-btn+p{
 	text-indent:196px;
 	margin-top:23px;
 	color:#c7c7c7;
 }
-section.main .enrol-right .policy{
+.enrol-right #submitUser #policy{
+	margin-top:30px;
+	text-align: center;
+}
+.enrol-right #submitUser .policy{
 	width:12px;
 	height:12px;
 }
-section.main .enrol-right .policy+label{
+.enrol-right #submitUser .policy+label{
 	font-size:12px;
 }
-section.main .enrol-right .policy+label a{
+.enrol-right #submitUser .policy+label a{
 	color:#939393;
 	text-decoration: underline;
 }
-section.main .enrol-right .promise{
+.enrol-right #submitUser .promise{
 	font-size:12px;
 	color:#c7c7c7;
 	text-indent:196px;
@@ -152,3 +219,14 @@ footer p{
 	text-indent:400px;
 	color:#9d9b9b;
 }
+/*住址插件CSS*/
+.wrap{width:464px;height:34px;margin:20px auto;border:0;position:relative;}
+/* .input{position:absolute;top:0;left:0;width:457px;margin:0;padding-left:5px;height:30px;line-height:30px;font-size:12px;border:1px solid #c9cacb;} */
+._citys { width: 450px; display: inline-block; border: 2px solid #eee; padding: 5px; position: relative; background: #fff;}
+._citys span { color: #05920a; height: 15px; width: 15px; line-height: 15px; text-align: center; border-radius: 3px; position: absolute; right: 10px; top: 10px; border: 1px solid #05920a; cursor: pointer; }
+._citys0 { width: 95%; height: 34px; line-height: 34px; display: inline-block; border-bottom: 2px solid #05920a; padding: 0px 5px; font-size:14px; font-weight:bold; margin-left:6px; }
+._citys0 li { display: inline-block; line-height: 34px; font-size: 15px; color: #888; width: 80px; text-align: center; cursor: pointer; }
+._citys1 { width: 100%; display: inline-block; padding: 10px 0; }
+._citys1 a { width: 83px; height: 35px; display: inline-block; background-color: #f5f5f5; color: #666; margin-left: 6px; margin-top: 3px; line-height: 35px; text-align: center; cursor: pointer; font-size: 12px; border-radius: 5px; overflow: hidden; }
+._citys1 a:hover { color: #fff; background-color: #05920a; }
+.AreaS { background-color: #05920a !important; color: #fff !important; }

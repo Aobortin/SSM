@@ -12,7 +12,6 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 <link rel="stylesheet" type="text/css" href="css/general.css"/>
 <link rel="stylesheet" type="text/css" href="css/login.css"/>
 <script type="text/javascript" src="js/login.js"></script>
-
 </head>
 <body>
 	<header>
@@ -33,21 +32,22 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 			<div class="login-form">
 				<p class="login-title">会员登录</p>
 				<form action="${basePath}/SSM/main" method="post">
-					<span class="login-message">用户名或密码不正确</span>
 					<div class="login-zh">
-						<label for="userName">登录账号</label>
-						<input name="userName" id="userName" placeholder="邮箱/ID/手机号"/>
+						<input id="userName" name="userName" placeholder="请输入邮箱/ID/手机号"/>
 					</div>
-					
+					<span class="vali-msg vali-userName">请输入用户名</span>
 					<div class="login-mm">
-						<label for="userPwd">密<i>码</i></label>
-						<input name="userPwd" id="userPwd" placeholder="密码" type="password"/>
+						<input id="userPwd" name="userPwd" placeholder="请输入密码" type="password"/>
 					</div> 
-					<p class="auto-login"><input type="checkbox" id="autoLogin"/><label for="autoLogin">两周内自动登录</label></p>
-					<div class="login-btn">
+					<span class="vali-msg vali-userPwd">请输入密码</span>
+					<div class="auto-login">
+						<input type="checkbox" id="autoLogin"/><label for="autoLogin">两周内自动登录</label>
+						<a href="${basePath}/SSM/account/index">忘记密码?</a>	
+					</div>
+					<span class="vali-msg vali-login">账号或密码错误，请检查后重试</span>
+					<div class="login-btn clearfix">
 						<!-- <input type="submit" value="登录"/> -->
 						<a class="submit">登录</a>
-						<a href="${basePath}/SSM/account/index">忘记密码</a>
 					</div>
 					<div class="login-other">
 					</div>
