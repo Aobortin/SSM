@@ -1,10 +1,15 @@
 package com.shsxt.controller;
 
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.imageio.ImageIO;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -17,6 +22,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.shsxt.service.ArticleService;
 import com.shsxt.service.UserService;
 import com.shsxt.utils.FileHandleUtil;
+import com.shsxt.utils.VerifyCodeUtil;
 import com.shsxt.vo.Article;
 import com.shsxt.vo.User;
 
@@ -119,5 +125,32 @@ public class MainController {
 	public String member(HttpSession httpSession,Model model) {
 		model.addAttribute("currentUser", httpSession.getAttribute("currentUser"));
 		return "member";
+	}
+	
+	@RequestMapping("verifyCode")
+	public void code(HttpSession httpSession, HttpServletResponse resp) throws IOException {
+		Map<String, BufferedImage> verifyCode = VerifyCodeUtil.getCode();
+		String randomCode="";  
+        for (Map.Entry<String, BufferedImage> entry : verifyCode.entrySet()) {  
+        	randomCode=entry.getKey();   
+        }  
+		// 将四位数字的验证码保存到Session中。
+        System.out.print(randomCode);
+        httpSession.setAttribute("code", randomCode.toString());
+        // 禁止图像缓存。
+        resp.setHeader("Pragma", "no-cache");
+        resp.setHeader("Cache-Control", "no-cache");
+        resp.setDateHeader("Expires", 0);
+        resp.setContentType("image/jpeg");
+        // 将图像输出到Servlet输出流中。
+        ServletOutputStream sos = resp.getOutputStream();
+        ImageIO.write(verifyCode.get(randomCode), "jpeg", sos);
+        sos.close();
+	}
+	
+	@ResponseBody
+	@RequestMapping("getVerifyCode")
+	public String getVerifyCode(HttpSession httpSession) {
+		return (String) httpSession.getAttribute("code");
 	}
 }

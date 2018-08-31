@@ -48,6 +48,7 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 					<dt>我的生日</dt>
 					<dd>
 						<input type="text" id="datepicker" readonly="readonly" required="required"/>
+						<span class="vali-msg vali-birthday">请选择生日</span>
 					</dd>
 				</dl>
 				<input type="hidden" name="birthday"/>
@@ -56,6 +57,7 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 					<dd>
 						<input class="input" name="" id="city" type="text" placeholder="请选择" autocomplete="off" readonly="readonly"/>
 						<input name="address" type="hidden"/>
+						<span class="vali-msg vali-address">请选择常住地</span>
 					</dd>
 				</dl>
 				<dl class="c marriage">
@@ -81,7 +83,7 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 				<dl class="c education">
 					<dt>学历</dt>
 					<dd>
-						<input readonly="readonly" placeholder="请选择"/>
+						<input class="education" readonly="readonly" placeholder="请选择"/>
 						<ul>
 							<li>初中</li>
 							<li>中专</li>
@@ -92,6 +94,7 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 							<li>博士</li>
 						</ul>
 						<input name="education" type="hidden"/>
+						<span class="vali-msg vali-education">请选择学历</span>
 					</dd>
 				</dl>
 				<dl class="c salary">
@@ -107,6 +110,7 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 							<li>20001-50000元</li>
 							<li>50000元以上</li>
 						</ul>
+						<span class="vali-msg vali-salary">请选择月薪</span>
 					</dd>
 				</dl>
 				<div class="form-line">表单分隔线</div>
@@ -114,24 +118,29 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 					<dt>我的手机</dt>
 					<dd>
 						<input name="phone" value="" placeholder="请输入你的手机号"/>
-					</dd>
-				</dl>
-				<dl class="c">
-					<dt>验证码</dt>
-					<dd>
-						<input name="remark1" placeholder="请输入校验码"/>
+						<span class="vali-msg vali-phone">请输入手机号</span>
 					</dd>
 				</dl>
 				<dl class="c">
 					<dt>创建密码</dt>
 					<dd>
 						<input name="userPwd" type="password" placeholder="请设置登录密码（6-20位）"/>
+						<span class="vali-msg vali-password">请设置登录密码</span>
 					</dd>
 				</dl>
 				<dl class="c">
 					<dt>昵称</dt>
 					<dd>
 						<input name="nickName" value=""/>
+						<span class="vali-msg vali-nickName">请填写昵称</span>
+					</dd>
+				</dl>
+				<dl class="c">
+					<dt>验证码</dt>
+					<dd>
+						<input class="verifyCode" placeholder="请输入校验码"/>
+						<img id="codeImg" alt="验证码" src="${basePath}/SSM/verifyCode"/>
+						<span class="vali-msg vali-verifyCode">验证码不正确</span>
 					</dd>
 				</dl>
 				<p id="policy">

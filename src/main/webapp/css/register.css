@@ -143,7 +143,6 @@ section.main .enrol-right .enrol-remind{
 .enrol-right .education li:hover{
 	background-color: #d9d9d9;
 }
-
 .enrol-right .salary ul{
 	width:227px;
 	position: absolute;
@@ -168,6 +167,14 @@ section.main .enrol-right .enrol-remind{
 	width:610px;
 	height:21px;
 	border-bottom:1px dashed #ddd;
+}
+.enrol-right #submitUser #codeImg{
+	width:130px;
+	height:37px;
+	position: absolute;
+	left:380px;
+	top:20px;
+	display: none;
 }
 .enrol-right #submitUser .submit-btn{
 	display:block;
@@ -206,6 +213,23 @@ section.main .enrol-right .enrol-remind{
 	color:#c7c7c7;
 	text-indent:196px;
 	margin-top:43px;
+}
+.enrol-right .vali-msg{
+	position: absolute;
+	width:300px;
+	color:#f60;
+	font-size:12px;
+	text-indent:35px;
+	left:335px;
+	top:20px;
+	display:none;
+}
+.enrol-right .vali-birthday{
+	/* left:335px;
+	top:20px; */
+}
+.enrol-right .vali-verifyCode{
+	left:490px;
 }
 footer{
 	width:960px;

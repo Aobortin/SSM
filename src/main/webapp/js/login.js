@@ -13,19 +13,19 @@ $(function(){
 	userName.on("focus",function(){
 		vali_userName.css("display","none");
 	}).on("blur",function(){
-		if(validateInput(userName)){
+		if(validateEmpty(userName)){
 			vali_userName.css("display","block");
 		}
 	});
 	userPwd.on("focus",function(){
 		vali_userPwd.css("display","none");
 	}).on("blur",function(){
-		if(validateInput(userPwd)){
+		if(validateEmpty(userPwd)){
 			vali_userPwd.css("display","block");
 		}
 	});
 	$(".submit").on("click",function(){
-		var res=validateInput(userName,userPwd);
+		var res=validateEmpty(userName,userPwd);
 		if(res){
 			$(".vali-"+res.attr("id")).css("display","block");
 		}else{
@@ -45,7 +45,7 @@ $(function(){
 	});
 });
 
-function validateInput(){
+function validateEmpty(){
 	for (var i = 0; i < arguments.length; i++) {
 		if (arguments[i].val().replace(/(^s*)|(s*$)/g, "").length==0){
 			return arguments[i];

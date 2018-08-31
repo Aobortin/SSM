@@ -9,7 +9,7 @@ header div{
 	margin:0 auto;
 }
 header div .header-left{
-	width:400px;
+	width:600px;
 	float:left;
 	font-weight: bold;
 }
@@ -26,7 +26,7 @@ header div .header-left .sign{
 	float:left;
 	margin-left:20px;
 	border-left:1px solid #ddd;
-	width:100px;
+	width:300px;
 	font-weight:normal;
 	color:#999;
 	text-indent:20px;
@@ -62,17 +62,15 @@ section.main .main-login .login-form{
 	color:red;
 	font-size:12px;
 	text-indent:35px;
+	display:none;
 }
 .main-login .login-form .vali-userName{
-	display:none;
 	top:113px;
 }
 .main-login .login-form .vali-userPwd{
-	display:none;
 	top:173px;
 }
 .main-login .login-form .vali-login{
-	display:none;
 	left:70px;
 	top:220px;
 }

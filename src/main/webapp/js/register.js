@@ -5,7 +5,9 @@ $(function(){
       changeYear: true,
       showAnim:"blind",
       dateFormat:"yy-mm-dd",
-      regional:"zh-CN"
+      regional:"zh-CN",
+      minDate: "-79y +0D", 
+      maxDate: "-18y +0D"
     });
     $.datepicker.setDefaults($.datepicker.regional['zh-CN']);
 	
@@ -29,7 +31,7 @@ $(function(){
           $("input[name=height]").val(ui.value);
         }
       });
-      $( "#amount" ).html($( "#slider-range-min" ).slider( "value" )+"cm");
+//      $( "#amount" ).html($( "#slider-range-min" ).slider( "value" )+"cm");
     
 	$(".gender .label").on("click",function(e){
 		$(".gender .label").each(function(i){
@@ -82,13 +84,33 @@ $(function(){
 		$(".salary ul").css("display","none");
 	});
 	
+	$("#codeImg").on("click",function () {
+	    var imgSrc = $("#codeImg");
+	    var src = imgSrc.attr("src");
+	    imgSrc.attr("src", chgUrl(src));
+	} );
+//	验证码
+	$("input.verifyCode").on("focus",function(){
+		$("#codeImg").css("display","block");
+	});
+//	表单提交
 	$(".submit-btn").on("click",function(){
-		$("input[name=birthday]").val(stringToDate($("#datepicker").val()));
-		$("input[name=address]").val($("#city").val());
-		$("input[name=height]").val($("#amount").text().replace("cm",""));
+		var birthday=$("input[name=birthday]");
+		var address=$("input[name=address]");
+		var height=$("input[name=height]");
+		var gender=$("input[name=gender]");
+		var marriage=$("input[name=marriage]");
+		if(validateEmpty($("#datepicker"))){
+			$(".vali-birthday").css("display","block");
+			return false;
+		}else{
+			birthday.val(stringToDate($("#datepicker").val()));
+		}
+		address.val($("#city").val());
+		height.val($("#amount").text().replace("cm",""));
+		gender.val($(".gender .checked").attr("role"));
+		marriage.val($(".marriage .checked").attr("role"));
 		var education=$("input[name=education]").val();
-		$("input[name=gender]").val($(".gender .checked").attr("role"));
-		$("input[name=marriage]").val($(".marriage .checked").attr("role"));
 		switch(education){
 		case "初中":
 			$("input[name=education]").val(1);
@@ -105,8 +127,29 @@ $(function(){
 		case "博士":
 			$("input[name=education]").val(7);
 		}
-		
-		$("#submitUser").submit();
+		var verifyCode="";
+		$.ajax({
+			type:"post",
+			url:"/SSM/getVerifyCode",
+			data:"",
+			success:function(msg){
+				verifyCode=msg;
+			}
+		});
+//		var res=validateEmpty(birthday,address,education,gender,marriage);
+//		if(res){
+//			$(".vali-"+res.attr("name")).css("display","block");
+//		}else{
+			if($(".verifyCode").val()==""){
+				$(".vali-verifyCode").text("请填写验证码");
+				$(".vali-verifyCode").css("display","block");
+			}else if($(".verifyCode").val()!=verifyCode){
+				$(".vali-verifyCode").text("验证码不正确");
+				$(".vali-verifyCode").css("display","block");
+			}else{
+				$("#submitUser").submit();
+			}
+//		}
 	});
 })
 
@@ -127,3 +170,21 @@ function stringToDate(dateStr,separator){
      var date = new Date(year,month -1,day);
      return date;
  }
+
+//加入时间戳，去缓存机制   
+function chgUrl(url) {
+    var timestamp = (new Date()).valueOf();if ((url.indexOf("&") >= 0)) {
+        url = url + "&timestamp=" + timestamp;
+    } else {
+        url = url + "?timestamp=" + timestamp;
+    }
+    return url;
+}
+//非空校验
+function validateEmpty(){
+	for (var i = 0; i < arguments.length; i++) {
+		if (arguments[i].val().replace(/(^s*)|(s*$)/g, "").length==0){
+			return arguments[i];
+		}
+	}
+}
