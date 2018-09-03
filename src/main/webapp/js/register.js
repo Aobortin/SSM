@@ -131,6 +131,7 @@ $(function(){
 		$.ajax({
 			type:"post",
 			url:"/SSM/getVerifyCode",
+			async:false,
 			data:"",
 			success:function(msg){
 				verifyCode=msg;
@@ -140,6 +141,7 @@ $(function(){
 //		if(res){
 //			$(".vali-"+res.attr("name")).css("display","block");
 //		}else{
+		alert($(".verifyCode").val()+"<<<>>>"+verifyCode);
 			if($(".verifyCode").val()==""){
 				$(".vali-verifyCode").text("请填写验证码");
 				$(".vali-verifyCode").css("display","block");
