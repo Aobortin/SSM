@@ -45,6 +45,7 @@
 					        <a type="button" class="btn" id="browse">浏览</a>
 					        <input type="file" name="file" id="fileinp">
 							<a type="button" class="btn upload" >上传</a>
+							<!-- UEeditor图片上传功能实现 https://blog.csdn.net/mlc1218559742/article/details/51952808 -->
 						</form>
 					</div>
 				</div>
