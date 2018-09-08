@@ -23,9 +23,9 @@ public class TestController {
         return "f02";
     }
     
-    @RequestMapping("uploadImg")
-    public String uploadImg() {
-    	return "uploadImg";
-    }
+//    @RequestMapping("uploadImg")
+//    public String uploadImg() {
+//    	return "uploadImg";
+//    }
     
 }

@@ -102,7 +102,10 @@ public class MainController {
 	
 	@RequestMapping("userCenter")
 	public String userCenter(HttpSession httpSession,Model model) {
-		model.addAttribute("currentUser", httpSession.getAttribute("currentUser"));
+		User currentUser = (User) httpSession.getAttribute("currentUser");
+		model.addAttribute("currentUser", currentUser);
+		List<Article> currentUserArticle = articleService.queryAllArticleByUser(currentUser.getId());
+		model.addAttribute("articles", currentUserArticle);
 		return "userCenter";
 	}
 	
@@ -153,4 +156,5 @@ public class MainController {
 	public String getVerifyCode(HttpSession httpSession) {
 		return (String) httpSession.getAttribute("code");
 	}
+	
 }
