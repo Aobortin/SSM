@@ -57,7 +57,8 @@ header h1{
 	text-indent:-9999px;
 	top:20px;
 	width:153px;
-	background: #ccc;
+	cursor:pointer;
+	background: url(../image/tiny-logo.png) no-repeat center center;
 }
 header .top-search{
 	width:300px;

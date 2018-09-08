@@ -6,6 +6,9 @@
 <script type="text/javascript" src="js/userCenter.js"></script>
 <link rel="stylesheet" type="text/css" href="css/userCenter.css"/>
 <title>用户中心</title>
+ <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/zh-cn.js"></script>
 </head>
 <jsp:include page="../include/head.jsp"></jsp:include>
 <body>
@@ -51,6 +54,8 @@
 				</div>
 				<div class="module-body clearfix hide">
 					<label for="nickName">修改昵称</label><input id="nickName" name="nickName" value="${currentUser.nickName}"/>
+					<!-- <script id="editor" type="text/plain" style="width:500px;height:200px;"></script> -->
+					<div id="editor" style="width:500px;height:200px;"></div>
 				</div>
 				<div class="module-body clearfix hide">
 					<label for="userPwd">修改密码</label><input type="password" id="userPwd" name="userPwd" value="${currentUser.userPwd}"/>

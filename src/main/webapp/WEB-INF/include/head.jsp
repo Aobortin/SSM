@@ -17,7 +17,7 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 </head>
 <body>
 <header>
-		<h1><a href="###"><img alt="风雪佳人" src="image/logo.png"/></a></h1>
+		<h1>顶部LOGO</h1>
 		<div class="top-search">
 			<div class="search-input">
 				<input type="text"/>
