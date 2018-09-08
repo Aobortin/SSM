@@ -16,6 +16,9 @@ $(function(){
 		more.children("a").css("backgroundImage","url(image/arrowMored.png)");
 	});
 	
+	$("header h1").on("click",function(){
+		window.location.href='/SSM/main';
+	});
 	var slider_prev=$(".slider-prev");
 	var slider_next=$(".slider-next");
 	$(".banner").on("mouseover",function(){
@@ -36,5 +39,5 @@ $(function(){
 		user_menu.css("display","block");
 	}).on("mouseout",function(){
 		user_menu.css("display","none");
-	})
+	});
 })
