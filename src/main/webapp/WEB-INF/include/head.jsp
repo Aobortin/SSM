@@ -43,7 +43,7 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 					</c:when>
 					<c:otherwise>
 						<div id="login-out">
-							<img class="user-img" src="image/avatar/${currentUser.userName}.jpeg"/>
+							<img class="user-img" src="image/avatar/${currentUser.userName}.jpg"/>
 							<span class="user-name">${currentUser.nickName}</span>
 							<div class="user-menu">
 								<div class="topArrow1"></div>
@@ -68,15 +68,15 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 				<li id="more"><a href="javascript:void(0)">更多</a></li>
 			</ul>
 			<ul class="second-menu">
-                <li><a href="">电台</a></li>
-                <li><a href="">MV</a></li>
-                <li><a href="">歌单</a></li>
-                <li><a href="">歌手</a></li>
+                <li><a href="">待开放</a></li>
+                <li><a href="">待开放</a></li>
+                <li><a href="">待开放</a></li>
+                <li><a href="">待开放</a></li>
             </ul>
 			<ul class="sub-nav">
-				<li><a href="" class="icon-nav1">音乐直播</a></li>
-				<li><a href="" class="icon-nav2">酷狗LIVE</a></li>
-				<li><a href="" class="icon-nav3">音乐人</a></li>
+				<li><a href="" class="icon-nav1">佳人直播</a></li>
+				<li><a href="" class="icon-nav2">佳人LIVE</a></li>
+				<li><a href="" class="icon-nav3">有心人</a></li>
 				<li><a href="" class="icon-nav4">商城</a></li>
 			</ul>
 		</div>

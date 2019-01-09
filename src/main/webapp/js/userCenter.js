@@ -35,7 +35,7 @@ $(function(){
 	});
 	
 	var um = UM.getEditor('myEditor',{
-    	initialContent:"请在此输入内容",
+    	initialContent:"",
     	autoHeightEnabled:false,
     	toolbar:[
             'source | undo redo | bold italic underline strikethrough | superscript subscript | forecolor backcolor | removeformat |',

@@ -32,12 +32,12 @@
 		<div class="subContentM">
 			<div class="SelectHotSonglist">
 				<div class="item-title">
-					<h3><b>精选</b>歌单</h3>
+					<h3><b>精选</b>佳人</h3>
 					<a target="_blank" href="" class="more">更多</a>
 				</div>
 				<div class="item-content">
 					<div class="cpt cptBig">
-						<a href="${basePath}/SSM/loverDetail?loverId=1"><img alt="" src="image/cptBig.jpg"></a>
+						<a href="${basePath}/SSM/loverDetail?loverId=1"><img alt="" src="image/cptBig.png"></a>
 					</div>
 					<div class="cpt cptMid">
 						<a href="${basePath}/SSM/loverDetail?loverId=2"><img alt="zhangsan" src="image/mid1.jpg"></a>
@@ -55,7 +55,7 @@
 			</div>
 			<div class="HotSonglist">
 				<div class="item-title">
-					<h3><b>热门</b>榜单</h3>
+					<h3><b>活跃</b>会员</h3>
 					<a target="_blank" href="" class="more">更多</a>
 				</div>
 				<div class="listItem">
@@ -99,7 +99,7 @@
 		<div class="subContentM">
 			<div class="newSongList">
 				<div class="item-title">
-					<h3><b>新歌</b>首发</h3>
+					<h3><b>佳文</b>刊登</h3>
 					<a target="_blank" href="" class="more">更多</a>
 				</div>
 				<div class="item-content">
@@ -124,7 +124,7 @@
 			</div>
 			<div class="albumList">
 				<div class="item-title">
-					<h3><b>推荐</b>MV</h3>
+					<h3><b>推荐</b>佳人</h3>
 					<a target="_blank" href="" class="more">更多</a>
 				</div>
 				<div class="item-content">
@@ -153,7 +153,7 @@
 		<div class="subContentM limitHight">
 			<div class="HotRadio">
 				<div class="item-title">
-					<h3><b>热门</b>电台</h3>
+					<h3><b>热门</b>活动</h3>
 					<a target="_blank" href="" class="more">更多</a>
 				</div>
 				<div class="item-content">
@@ -253,7 +253,7 @@
 			</div>
 			<div class="HotSinger">
 				<div class="item-title">
-                    <h3><b>热门</b>歌手</h3>
+                    <h3><b>每日</b>新人</h3>
                     <div class="tabT" id="tabMenu">
                     	<span class="active" data="0">华语</span>
                     	<span data="1">欧美</span>

@@ -111,7 +111,7 @@ public class MainController {
 	
 	@RequestMapping("uploadFile")
 	public String  springUpload(HttpServletRequest request,HttpSession httpSession) throws IllegalStateException, IOException{
-		String path="/Users/linwang/Documents/SSM/src/main/webapp/image/avatar/";
+		String path="D:/fxjr/SSM/src/main/webapp/image/avatar/";
 		User currentUser=(User)httpSession.getAttribute("currentUser");
 		FileHandleUtil.upload(request, path,currentUser.getUserName());
 	    return "userCenter";

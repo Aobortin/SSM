@@ -17,7 +17,7 @@
 	<section class="info-center">
 		<div class="avatar-side">
 			<div class="avatar-cover">
-				<img alt="" src="image/avatar/${currentUser.userName}.jpeg"/>
+				<img alt="" src="image/avatar/${currentUser.userName}.jpg"/>
 			</div>
 			<div class="avatar-txt">
 				<p><a href="javascript:void(0)">${currentUser.nickName}</a></p>
@@ -42,11 +42,11 @@
 				<div class="module-body clearfix">
 					<p class="desc">设置一个你喜欢的头像:</p>
 					<div class="avatar-demo">
-						<img alt="" src="image/avatar/${currentUser.userName}.jpeg"/>
+						<img alt="" src="image/avatar/${currentUser.userName}.jpg"/>
 					</div>
 					<div class="avatar-upload">
 						<form name="uploadPortrait" action="${basePath}/SSM/uploadFile" method="post"  enctype="multipart/form-data">
-							<p>请选择图片文件，最佳尺寸400 x 400，支持JPG，JPEG，GIF，PNG。</p>
+							<p>请选择图片文件，最佳尺寸400 x 400，支持JPG，jpg，GIF，PNG。</p>
 					        <a type="button" class="btn" id="browse">浏览</a>
 					        <input type="file" name="file" id="fileinp">
 							<a type="button" class="btn upload" >上传</a>

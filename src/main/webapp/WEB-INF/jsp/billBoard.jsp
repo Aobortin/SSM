@@ -12,11 +12,11 @@
 <body>
 	<section class="main">
 		<div class="side-bar">
-			<h3><a href="javascript:void(0)">热门榜单<i>向上箭头</i></a></h3>
+			<h3><a href="javascript:void(0)">热门文章<i>向上箭头</i></a></h3>
 			<ul>
-				<li><a href="javascript:void(0)" class="current">酷狗飙升榜</a></li>
-				<li><a href="javascript:void(0)">酷狗TOP500</a></li>
-				<li><a href="javascript:void(0)">网络红歌榜</a></li>
+				<li><a href="javascript:void(0)" class="current">耳语花园</a></li>
+				<li><a href="javascript:void(0)">春花秋月</a></li>
+				<li><a href="javascript:void(0)">大江东去</a></li>
 				<li><a href="javascript:void(0)">DJ热歌榜</a></li>
 				<li><a href="javascript:void(0)">华语新歌榜</a></li>
 				<li><a href="javascript:void(0)">欧美新歌榜</a></li>
@@ -48,7 +48,7 @@
 		</div>
 		<div class="content">
 			<div class="title">
-				<h3>酷狗飙升榜</h3>
+				<h3>耳语花园</h3>
 				<a href="" title="播放全部"><i>播放图标</i>播放全部</a>
 			</div>
 			<div class="rank-wrap">

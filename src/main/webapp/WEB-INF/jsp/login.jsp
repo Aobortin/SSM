@@ -19,7 +19,7 @@ String basePath =request.getScheme()+"://"+request.getServerName()+":"+request.g
 			<section class="header-left">
 				<a href="${basePath}/SSM/main"><img alt="风雪佳人" src="image/logo.png"/></a>
 				<div class="sign">
-					<span>风雪人生路，佳人伴行之</span>
+					<span>风雪人生，佳人伴行</span>
 				</div>
 			</section>
 			<section class="header-right">
